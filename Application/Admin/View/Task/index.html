@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="__PUBLIC__/css/global.css" media="all">
+    <link rel="stylesheet" href="__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<div class="admin-main">
+
+
+    <fieldset class="layui-elem-field">
+        <legend>工单列表</legend>
+        <div class="layui-field-box">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>工单ID</th>
+                    <th>工单名称</th>
+                    <th>创建时间</th>
+                    <th>完成量</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <foreach name="task_list" key="k" item="vo">
+                    <tr>
+                        <td>{$k+1}</td>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.name}</td>
+                        <td>{$vo.createtime|date="Y-m-d H:i:s",###}</td>
+                        <td>{$vo.count}</td>
+                        <td>
+                            <a  data="{$vo.id}" class="layui-btn layui-btn-mini layui-btn-normal send"><i class="layui-icon">&#xe618;</i> 派发</a>
+                            <a  data="{$vo.id}" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i> 删除</a>
+                        </td>
+                    </tr>
+                </foreach>
+                </tbody>
+            </table>
+
+        </div>
+    </fieldset>
+    <div class="admin-table-page">
+        <div id="page" class="page">
+            {$page}
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugins/jquery-1.9.1.min.js"></script>
+<script>
+    layui.use(['laypage','layer','form'], function() {
+        var laypage = layui.laypage,
+            $ = layui.jquery
+        //请求表单
+        $('.add').click(function(){
+
+        });
+        //派发
+        $('.send').click(function(){
+            var task_id = $(this).attr('data');
+            var url = "{:U('Task/SendTask')}";
+            $.post(url,{'task_id':task_id},function(data){
+                if(data.status == 'error'){
+                    layer.msg(data.msg,{icon: 5});
+                    return;
+                }
+                layer.open({
+                    title:'编辑用户',
+                    type: 1,
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['500px'], //宽高
+                    content: data,
+                });
+            })
+        });
+
+
+        //删除
+        $('.del').click(function(){
+            var task_id = $(this).attr('data');
+            var url = "{:U('Task/deleteTask')}";
+            layer.confirm('确定删除吗?', {
+                icon: 3,
+                skin: 'layer-ext-moon',
+                btn: ['确认','取消'] //按钮
+            }, function(){
+                $.post(url,{'task_id':task_id},function(data){
+                    if(data.status == 'error'){
+                        layer.msg(data.msg,{icon: 5});//失败的表情
+                        return;
+                    }else{
+                        layer.msg(data.msg, {
+                            icon: 6,//成功的表情
+                            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                        }, function(){
+                            location.reload();
+                        });
+                    }
+                })
+            });
+        })
+
+    });
+</script>
+</body>
+
+</html>

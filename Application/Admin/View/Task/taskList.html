@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="__PUBLIC__/plugins/css/mine.css"  media="all">
+    <link rel="stylesheet" href="__PUBLIC__/css/global.css" media="all">
+    <link rel="stylesheet" href="__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+<fieldset class="layui-elem-field">
+    <form class="layui-form">
+        <h2 style="font-size: 25px;font-weight: bolder;margin-left: 50px;margin-top :20px;margin-bottom: 20px;">任务列表</h2>
+        <hr class="hr">
+        <div class="layui-form-item">
+            <label class="layui-form-label">创建人：</label>
+            <div class="layui-input-inline">
+                <select>
+                    <option value ="">请选择</option>
+                    <div class="layui-input-inline">
+                    <volist name="user_info" id="vo">
+                        <option value ="{$vo.id}">{$vo.user_name}</option>
+                    </volist>
+                    </div>
+                </select>
+            </div>
+
+            <label class="layui-form-label">执行人：</label>
+            <div class="layui-input-inline">
+                <select>
+                    <option value ="">请选择</option>
+                    <volist name="user_info" id="vo">
+                        <option value ="{$vo.id}">{$vo.user_name}</option>
+                    </volist>
+                </select>
+            </div>
+
+            <label class="layui-form-label">审核人：</label>
+            <div class="layui-input-inline">
+                <select>
+                    <option value ="">请选择</option>
+                    <volist name="user_info" id="vo">
+                        <option value ="{$vo.id}">{$vo.user_name}</option>
+                    </volist>
+                </select>
+            </div>
+            <button class="layui-btn" lay-submit lay-filter="task" style="margin-left: 30px;"  lay-submit lay-filter="user">查看</button>
+            <button type="reset" id="btn" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </form>
+    </fieldset>
+
+<fieldset class="layui-elem-field">
+
+    <div class="layui-field-box">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>任务Id</th>
+                <th>所属工单</th>
+                <th>创建人</th>
+                <th>执行人</th>
+                <th>审核人</th>
+                <th>创建时间</th>
+                <th>当前状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <foreach name="data" key="k" item="vo">
+                <tr>
+                    <td>{$k+1}</td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.tid}</td>
+                    <td>{$vo.createid}</td>
+                    <td>{$vo.exeid}</td>
+                    <td>{$vo.changeid}</td>
+                    <td>{$vo.time|date="Y-m-d H:i:s",###}</td>
+                    <td>{$vo.state}</td>
+                    <td>
+                        <a data="{$vo.id}" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
+                        <a  data="{$vo.id}" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>
+
+                    </td>
+                </tr>
+            </foreach>
+            </tbody>
+        </table>
+
+    </div>
+</fieldset>
+    <script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/plugins/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click();
+
+        })
+        layui.use('form', function() {
+
+
+        })
+    </script>
+
+</body>
+</html>

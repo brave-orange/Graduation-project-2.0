@@ -1,0 +1,75 @@
+.type{
+    margin-right: 20px;
+
+}
+.ziduan{
+    margin-right: 20px;
+}
+.pname{
+    margin-right: 20px;
+}
+.div1{
+    margin-left: 40px;
+
+    height: auto;
+
+}
+.div2{
+
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.hr{
+    height:1px;
+    border:none;
+    border-top:1px dashed #0066CC;
+}
+.addbtn{
+    margin-left: 50px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.addbtn1{
+    margin-left: 20px;
+    background-color: #01AAED; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.addbtn:hover {
+    background-color:green;
+}
+.addbtn:active {
+    position:relative;
+    top:1px;
+}
+.addbtn1:hover {
+    background-color:blue;
+}
+.addbtn1:active {
+    position:relative;
+    top:1px;
+}
+.btnarea{
+    margin-left: 30px;
+    margin-top: 60px;
+}
+.tname{
+    height: 30px;
+    border: solid;
+}
+.gname{
+    height: 30px;
+    border: solid;
+}
