@@ -26,7 +26,7 @@ class AdminTaskListModel extends BaseModel
         return array('page' => $show , 'list' => $list);
 
     }
-    public function deleteTask($task_id)
+    public function deleteAdminTask($task_id)
     {
         $where['id'] = $task_id;
         return $this->where($where)->delete();

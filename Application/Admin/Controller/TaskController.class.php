@@ -31,11 +31,45 @@ class TaskController extends CommonController
         $task_info = M('admin_form_type')->where(array('Tid' => $task_id))->select();
         $task = M('admin_task_list')->field('id,name')->where(array('id' => $task_id))->find();
         $s = array(27, 28, 29, 30);
-        $user_info = M('admin_user as a')->join('admin_auth_group_access as b ON a.id = b.uid')->field('a.id,a.user_name,a.phone')->where(array('b.group_id' => array('IN', $s)))->select();
+        $user_info = M('admin_user as a')
+            ->join('admin_auth_group_access as b ON a.id = b.uid')
+            ->field('a.id,a.user_name,a.phone')
+            ->where(array('b.group_id' => array('IN', $s)))
+            ->select();//就这几个级别的能当审核人
         $user_info1 = M('admin_user')->field('id,user_name')->select();
         session('task_id',$task_id);
         $this->assign(array('task_info' => $task_info, 'user_info' => $user_info, 'user_info1' => $user_info1, 'task' => $task));
         $this->display('');
+
+    }
+
+    public function EditWork()
+    {
+        $work_id = I('post.work_id', '', 'intval');
+        $work_info = M('admin_task')
+            ->where(array('id'=>$work_id))
+            ->find();
+
+        $form_data = M('admin_form_type')
+            ->where(array('Tid'=>$work_info['tid']))
+            ->select();
+        $data = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->select();
+        $s = array(27, 28, 29, 30);
+        $user_info = M('admin_user as a')
+            ->join('admin_auth_group_access as b ON a.id = b.uid')
+            ->field('a.id,a.user_name,a.phone')
+            ->where(array('b.group_id' => array('IN', $s)))
+            ->select();//就这几个级别的能当审核人
+        $user_info1 = M('admin_user')->field('id,user_name')->select();
+        $this->assign(array('form_data' => $form_data, 'work_info' => $data,'user_info' => $user_info, 'user_info1' => $user_info1) );
+        $this->display('');
+
 
     }
     public function getTaskInfo()
@@ -50,7 +84,7 @@ class TaskController extends CommonController
     {
         $task_id = I('post.task_id','','intval');
 
-        $result = $this->admin_task_model->deleteTask($task_id);
+        $result = $this->admin_task_model->deleteAdminTask($task_id);
 
         if($result){
             $this->ajaxSuccess("删除成功");
@@ -148,10 +182,30 @@ class TaskController extends CommonController
     }
     public function taskList()
     {
-        $data = M('admin_task')->select();
+
+        $data = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->select();
+
         $user_info = M('admin_user')->field('id,user_name')->select();
         $this->assign(array('data'=>$data,'user_info'=>$user_info));
         $this->display();
     }
 
+    public function deleteWorks()
+    {
+        $task_id = I('post.work_id','','intval');
+
+        $result = M('admin_task')->where(array('id'=>$task_id))->delete();
+
+        if($result){
+            $this->ajaxSuccess("删除成功");
+        }else{
+            $this->ajaxError("删除失败");
+        }
+    }
 }

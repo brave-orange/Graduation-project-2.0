@@ -71,14 +71,13 @@
                     <td><?php echo ($vo["tid"]); ?></td>
                     <td><?php echo ($vo["createid"]); ?></td>
                     <td><?php echo ($vo["exeid"]); ?></td>
-                    <td><?php echo ($vo["changeid"]); ?></td>
+                    <td><?php echo ($vo["checkid"]); ?></td>
                     <td><?php echo (date("Y-m-d H:i:s",$vo["time"])); ?></td>
                     <td><?php echo ($vo["state"]); ?></td>
                     <td>
                         <a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
                         <a  data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>
-                        <a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini role"><i class="layui-icon">&#xe608;</i>分配角色</a>
-                        <a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini worktype"><i class="layui-icon">&#xe608;</i>绑定工种</a>
+
                     </td>
                 </tr><?php endforeach; endif; ?>
             </tbody>
@@ -93,9 +92,50 @@
             $('#btn').click();
 
         })
+
         layui.use('form', function() {
 
 
+        })
+        $('.del').click(function(){
+            var task_id = $(this).attr('data');
+            var url = "<?php echo U('Task/deleteWorks');?>";
+            layer.confirm('确定删除吗?', {
+                icon: 3,
+                skin: 'layer-ext-moon',
+                btn: ['确认','取消'] //按钮
+            }, function(){
+                $.post(url,{'task_id':task_id},function(data){
+                    if(data.status == 'error'){
+                        layer.msg(data.msg,{icon: 5});//失败的表情
+                        return;
+                    }else{
+                        layer.msg(data.msg, {
+                            icon: 6,//成功的表情
+                            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                        }, function(){
+                            location.reload();
+                        });
+                    }
+                });
+        })
+        })
+        $('.edit').click(function(){
+            var work_id = $(this).attr('data');
+            var url = "<?php echo U('Task/EditWork');?>";
+            $.post(url,{'work_id':work_id},function(data){
+                if(data.status == 'error'){
+                    layer.msg(data.msg,{icon: 5});
+                    return;
+                }
+                layer.open({
+                    title:'编辑用户',
+                    type: 1,
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['500px'], //宽高
+                    content: data,
+                });
+            })
         })
     </script>
 

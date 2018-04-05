@@ -1,6 +1,6 @@
 
 <form class="layui-form"enctype="multipart/form-data">
-        <h2 style="margin-left: 20px;font-weight: bolder;font-size: 20px;">{$task.name}</h2>
+    <h2 style="margin-left: 20px;font-weight: bolder;font-size: 20px;">{$work_info.name}</h2>
     <input type="text" name = "task_id" value="{$task.id}" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
@@ -36,9 +36,9 @@
             <div class="layui-input-inline">
                 <if condition="($vo.type eq 0)">
                     <input type="text" style="width: 250px;" name="{$vo.ziduan}" lay-verify="required" placeholder="请输入{$vo.title}" id="{$vo.ziduan}"   class="layui-input">
-                <elseif condition="$vo.type eq 1"/>
+                    <elseif condition="$vo.type eq 1"/>
                     <textarea style="height: 70px; width: 250px;" name="{$vo.ziduan}" lay-verify="required"  id="{$vo.ziduan}"   class="layui-input"></textarea>
-                <else />
+                    <else />
                     <input type="file" style="width: 250px;"  name="{$vo.ziduan}" lay-verify="required"  id="{$vo.ziduan}"   class="layui-input">
                 </if>
             </div>
@@ -55,8 +55,8 @@
         </div>
     </div>
 
-</form>
-<script>
+
+    <script>
 
     layui.use('form', function(){
 
@@ -82,15 +82,16 @@
 
             return false;//阻止表单跳转
         });
+        $(function () {
+            $('#btn').click();
+            var a = "<?php echo $_SESSION['user_info'][id]; ?>"
+            var b = "{$work_info.createid}"
+            if(a != b)
+            {
+                layer.msg("您不是本工单的创建人，无法编辑此工单！",{icon: 5});
+                $('#form').find('input,textarea,select,button').attr('readonly',true)
+            }
 
-    });
-    $(function () {
-        $('#btn').click();
-
-       /* a = " <?php echo session('task_id');?>"
-
-        $.post("{:U('Task/getTaskInfo')}",{'task_id':a},function(data){
-            var jsonstr =eval(data);
-        })*/
+        });
     })
 </script>

@@ -1,10 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<form class="layui-form" readonly="readonly" enctype="multipart/form-data">
-        <h2 style="margin-left: 20px;font-weight: bolder;font-size: 20px;"><?php echo ($task["name"]); ?></h2>
+<form class="layui-form" id="form" enctype="multipart/form-data">
+    <h2 style="margin-left: 20px;font-weight: bolder;font-size: 20px;"><?php echo ($task["name"]); ?></h2>
     <input type="text" name = "task_id" value="<?php echo ($task["id"]); ?>" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
         <div class="layui-input-inline">
+
             <input type="text" name="user_id" value="<?php echo session('user_info')['id']; ?>" style="display: none">
             <input type="text" style="width: 250px;"  name="user_name" lay-verify="required" placeholder="请输入用户名" id="name" value="<?php echo session('user_info')['user_name']; ?>" readonly="readonly" class="layui-input">
         </div>
@@ -30,9 +31,9 @@
             <label class="layui-form-label"><?php echo ($vo["title"]); ?></label>
             <div class="layui-input-inline">
                 <?php if(($vo["type"] == 0)): ?><input type="text" style="width: 250px;" name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required" placeholder="请输入<?php echo ($vo["title"]); ?>" id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input">
-                <?php elseif($vo["type"] == 1): ?>
+                    <?php elseif($vo["type"] == 1): ?>
                     <textarea style="height: 70px; width: 250px;" name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input"></textarea>
-                <?php else: ?>
+                    <?php else: ?>
                     <input type="file" style="width: 250px;"  name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input"><?php endif; ?>
             </div>
             </if>
@@ -73,15 +74,16 @@
 
             return false;//阻止表单跳转
         });
+        $(function () {
+            $('#btn').click();
+            var a = "<?php echo $_SESSION['user_info'][id]; ?>"
+            var b = "<?php echo ($work_info["createid"]); ?>"
+            if(a != b)
+            {
+                layer.msg("您不是本工单的创建人，无法编辑此工单！",{icon: 5});
+                $("form").attr('readonly',true);
+            }
 
-    });
-    $(function () {
-        $('#btn').click();
-
-       /* a = " <?php echo session('task_id');?>"
-
-        $.post("<?php echo U('Task/getTaskInfo');?>",{'task_id':a},function(data){
-            var jsonstr =eval(data);
-        })*/
+        });
     })
 </script>
