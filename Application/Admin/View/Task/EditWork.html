@@ -1,12 +1,12 @@
 
 <form class="layui-form"enctype="multipart/form-data">
-    <h2 style="margin-left: 20px;font-weight: bolder;font-size: 20px;">{$work_info.name}</h2>
-    <input type="text" name = "task_id" value="{$task.id}" style="display: none">
+    <h2 style="margin-left: 20px;color:#1E9FFF;font-weight: bolder;font-size: 20px;margin: 20px;">{$task.name}</h2>
+    <input type="text" name = "task_id" value="{$work_info.id}" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
         <div class="layui-input-inline">
-            <input type="text" name="user_id" value="<?php echo session('user_info')['id'];  ?>" style="display: none">
-            <input type="text" style="width: 250px;"  name="user_name" lay-verify="required" placeholder="请输入用户名" id="name" value="<?php echo session('user_info')['user_name'];  ?>" readonly="readonly" class="layui-input">
+            <input type="text" name="user_id" value="{$work_info.createid}" style="display: none">
+            <input type="text" style="width: 250px;"  name="user_name" lay-verify="required" placeholder="请输入用户名" id="name" value="{$user.user_name}" readonly="readonly" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
@@ -30,7 +30,7 @@
             </select>
         </div>
     </div>
-    <volist name="task_info" id="vo">
+    <volist name="form_data" id="vo">
         <div class="layui-form-item">
             <label class="layui-form-label">{$vo.title}</label>
             <div class="layui-input-inline">
@@ -45,18 +45,16 @@
             </if>
 
         </div>
-
     </volist>
-
-    <div class="layui-form-item">
+    </form>
+<input type="text" name = "1" id="formdata" value='{$work_info.data}' style="display: none">
+    <div class="layui-form-item" style="margin-top: 50px;"id="sub">
         <div class="layui-input-block">
-            <button class="layui-btn" lay-submit lay-filter="task" style="margin-left: 30px;"  lay-submit lay-filter="user">立即提交</button>
+            <button class="layui-btn"  lay-submit lay-filter="task" style="margin-left: 30px;"  lay-submit lay-filter="user">立即提交</button>
             <button type="reset" id="btn" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
-
-
-    <script>
+<script>
 
     layui.use('form', function(){
 
@@ -86,10 +84,23 @@
             $('#btn').click();
             var a = "<?php echo $_SESSION['user_info'][id]; ?>"
             var b = "{$work_info.createid}"
+            var eid = "{$work_info.exeid}"
+            var chid = "{$work_info.checkid}"
+            var formdata = $('#formdata').val()
+            var jsonform = eval("(" + formdata + ")");
+            foreach(jsonform as a=>key)
+            {
+
+            }
+
+            $('#checkid').val(chid)
+            $('#exeid').val(eid)
+
+
             if(a != b)
             {
                 layer.msg("您不是本工单的创建人，无法编辑此工单！",{icon: 5});
-                $('#form').find('input,textarea,select,button').attr('readonly',true)
+                $('#sub').hide()
             }
 
         });

@@ -49,17 +49,12 @@ class TaskController extends CommonController
         $work_info = M('admin_task')
             ->where(array('id'=>$work_id))
             ->find();
-
+        $task = M('admin_task_list')->field('id,name')->where(array('id' => $work_info['tid']))->find();
+        $user = M('admin_user')->where(array('id'=>$work_info['createid']))->field('user_name')->find();
         $form_data = M('admin_form_type')
             ->where(array('Tid'=>$work_info['tid']))
             ->select();
-        $data = M('admin_task as a')
-            ->join('left join admin_user as b ON a.createid = b.id')
-            ->join('left join admin_user as c ON a.exeid = c.id')
-            ->join('left join admin_user as d ON a.checkid = d.id')
-            ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
-            ->select();
+
         $s = array(27, 28, 29, 30);
         $user_info = M('admin_user as a')
             ->join('admin_auth_group_access as b ON a.id = b.uid')
@@ -67,7 +62,10 @@ class TaskController extends CommonController
             ->where(array('b.group_id' => array('IN', $s)))
             ->select();//就这几个级别的能当审核人
         $user_info1 = M('admin_user')->field('id,user_name')->select();
-        $this->assign(array('form_data' => $form_data, 'work_info' => $data,'user_info' => $user_info, 'user_info1' => $user_info1) );
+
+        //传回表单数据、工单数据、所有用户数据（用于选审核、执行人等）
+
+        $this->assign(array('form_data' => $form_data, 'work_info' => $work_info,'user_info' => $user_info, 'user_info1' => $user_info1,'task' => $task,'user'=>$user) );
         $this->display('');
 
 

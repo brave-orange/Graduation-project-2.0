@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<form class="layui-form" readonly="readonly" enctype="multipart/form-data">
-        <h2 style="margin-left: 20px;font-weight: bolder;font-size: 20px;"><?php echo ($task["name"]); ?></h2>
+<form class="layui-form"enctype="multipart/form-data">
+        <h2 style="margin-left: 20px;color:#1E9FFF;font-weight: bolder;font-size: 20px;margin: 20px;"><?php echo ($task["name"]); ?></h2>
     <input type="text" name = "task_id" value="<?php echo ($task["id"]); ?>" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>

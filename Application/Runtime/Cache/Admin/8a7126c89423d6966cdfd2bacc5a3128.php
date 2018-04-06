@@ -1,13 +1,12 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<form class="layui-form" id="form" enctype="multipart/form-data">
-    <h2 style="margin-left: 20px;font-weight: bolder;font-size: 20px;"><?php echo ($task["name"]); ?></h2>
-    <input type="text" name = "task_id" value="<?php echo ($task["id"]); ?>" style="display: none">
+<form class="layui-form"enctype="multipart/form-data">
+    <h2 style="margin-left: 20px;color:#1E9FFF;font-weight: bolder;font-size: 20px;margin: 20px;"><?php echo ($task["name"]); ?></h2>
+    <input type="text" name = "task_id" value="<?php echo ($work_info["id"]); ?>" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
         <div class="layui-input-inline">
-
-            <input type="text" name="user_id" value="<?php echo session('user_info')['id']; ?>" style="display: none">
-            <input type="text" style="width: 250px;"  name="user_name" lay-verify="required" placeholder="请输入用户名" id="name" value="<?php echo session('user_info')['user_name']; ?>" readonly="readonly" class="layui-input">
+            <input type="text" name="user_id" value="<?php echo ($work_info["createid"]); ?>" style="display: none">
+            <input type="text" style="width: 250px;"  name="user_name" lay-verify="required" placeholder="请输入用户名" id="name" value="<?php echo ($user["user_name"]); ?>" readonly="readonly" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
@@ -27,7 +26,7 @@
             </select>
         </div>
     </div>
-    <?php if(is_array($task_info)): $i = 0; $__LIST__ = $task_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="layui-form-item">
+    <?php if(is_array($form_data)): $i = 0; $__LIST__ = $form_data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="layui-form-item">
             <label class="layui-form-label"><?php echo ($vo["title"]); ?></label>
             <div class="layui-input-inline">
                 <?php if(($vo["type"] == 0)): ?><input type="text" style="width: 250px;" name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required" placeholder="请输入<?php echo ($vo["title"]); ?>" id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input">
@@ -39,15 +38,14 @@
             </if>
 
         </div><?php endforeach; endif; else: echo "" ;endif; ?>
-
-    <div class="layui-form-item">
+    </form>
+<input type="text" name = "1" id="formdata" value='<?php echo ($work_info["data"]); ?>' style="display: none">
+    <div class="layui-form-item" style="margin-top: 50px;"id="sub">
         <div class="layui-input-block">
-            <button class="layui-btn" lay-submit lay-filter="task" style="margin-left: 30px;"  lay-submit lay-filter="user">立即提交</button>
+            <button class="layui-btn"  lay-submit lay-filter="task" style="margin-left: 30px;"  lay-submit lay-filter="user">立即提交</button>
             <button type="reset" id="btn" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
-
-</form>
 <script>
 
     layui.use('form', function(){
@@ -78,10 +76,22 @@
             $('#btn').click();
             var a = "<?php echo $_SESSION['user_info'][id]; ?>"
             var b = "<?php echo ($work_info["createid"]); ?>"
+            var eid = "<?php echo ($work_info["exeid"]); ?>"
+            var chid = "<?php echo ($work_info["checkid"]); ?>"
+            var formdata = $('#formdata').val()
+            var jsonform = eval("(" + formdata + ")");
+            $(jsonform).each(function(name,value){
+                $(name).val(value)
+            })
+
+            $('#checkid').val(chid)
+            $('#exeid').val(eid)
+
+
             if(a != b)
             {
                 layer.msg("您不是本工单的创建人，无法编辑此工单！",{icon: 5});
-                $("form").attr('readonly',true);
+                $('#sub').hide()
             }
 
         });
