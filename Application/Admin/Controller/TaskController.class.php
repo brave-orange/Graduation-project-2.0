@@ -180,18 +180,25 @@ class TaskController extends CommonController
     }
     public function taskList()
     {
-
         $data = M('admin_task as a')
             ->join('left join admin_user as b ON a.createid = b.id')
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
-            ->select();
-
+            ->field('a.id as id ,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state');
         $user_info = M('admin_user')->field('id,user_name')->select();
-        $this->assign(array('data'=>$data,'user_info'=>$user_info));
-        $this->display();
+        if(IS_POST)
+        {
+            //$cid = I('post.');
+
+        }else{
+            $data->select();
+            $this->assign(array('data'=>$data,'user_info'=>$user_info));
+            $this->display();
+        }
+
+
+
     }
 
     public function deleteWorks()

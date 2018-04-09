@@ -1,6 +1,8 @@
 <?php if (!defined('THINK_PATH')) exit();?>
 <form class="layui-form"enctype="multipart/form-data">
     <h2 style="margin-left: 20px;color:#1E9FFF;font-weight: bolder;font-size: 20px;margin: 20px;"><?php echo ($task["name"]); ?></h2>
+    <?php if($state == 0 ): ?>已创建未接单
+        <?php else: ?> 已接单<?php endif; ?>
     <input type="text" name = "task_id" value="<?php echo ($work_info["id"]); ?>" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
@@ -38,14 +40,14 @@
             </if>
 
         </div><?php endforeach; endif; else: echo "" ;endif; ?>
-    </form>
-<input type="text" name = "1" id="formdata" value='<?php echo ($work_info["data"]); ?>' style="display: none">
+
     <div class="layui-form-item" style="margin-top: 50px;"id="sub">
         <div class="layui-input-block">
             <button class="layui-btn"  lay-submit lay-filter="task" style="margin-left: 30px;"  lay-submit lay-filter="user">立即提交</button>
             <button type="reset" id="btn" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
+</form>
 <script>
 
     layui.use('form', function(){
@@ -55,7 +57,7 @@
         //监听提交
         form.on('submit(task)', function(data){
             var taskInfo = data.field;
-            var url = "addTask";
+            var url = "updateTask";
             $.post(url,taskInfo,function(data){
                 if(data.status == 'error'){
                     layer.msg(data.msg,{icon: 5});//失败的表情
@@ -78,11 +80,15 @@
             var b = "<?php echo ($work_info["createid"]); ?>"
             var eid = "<?php echo ($work_info["exeid"]); ?>"
             var chid = "<?php echo ($work_info["checkid"]); ?>"
-            var formdata = $('#formdata').val()
-            var jsonform = eval("(" + formdata + ")");
-            $(jsonform).each(function(name,value){
-                $(name).val(value)
-            })
+            var formdata = '<?php echo ($work_info["data"]); ?>'
+            var jsondata= formdata.replace("\\", "/");
+            var jsonform = $.parseJSON(jsondata);
+           // console.log(jsonform)
+            for(var key in jsonform)
+            {
+                $('#'+key).val(jsonform[key])
+            }
+
 
             $('#checkid').val(chid)
             $('#exeid').val(eid)

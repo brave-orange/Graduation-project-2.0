@@ -71,7 +71,7 @@
                     return;
                 }
                 layer.open({
-                    title:'编辑用户',
+                    title:'派发工单',
                     type: 1,
                     skin: 'layui-layer-rim', //加上边框
                     area: ['500px'], //宽高
