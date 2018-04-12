@@ -30,6 +30,18 @@
             </select>
         </div>
     </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">优先级</label>
+        <div class="layui-input-inline">
+            <select name="level" id = "exeid">
+                    <option value ="1">低</option>
+                    <option value ="2">中</option>
+                    <option value ="3">高</option>
+            </select>
+        </div>
+    </div>
+
     <volist name="task_info" id="vo">
         <div class="layui-form-item">
             <label class="layui-form-label">{$vo.title}</label>

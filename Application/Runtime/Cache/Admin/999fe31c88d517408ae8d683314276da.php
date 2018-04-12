@@ -26,6 +26,18 @@
             </select>
         </div>
     </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">优先级</label>
+        <div class="layui-input-inline">
+            <select name="level" id = "exeid">
+                    <option value ="1">低</option>
+                    <option value ="2">中</option>
+                    <option value ="3">高</option>
+            </select>
+        </div>
+    </div>
+
     <?php if(is_array($task_info)): $i = 0; $__LIST__ = $task_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="layui-form-item">
             <label class="layui-form-label"><?php echo ($vo["title"]); ?></label>
             <div class="layui-input-inline">

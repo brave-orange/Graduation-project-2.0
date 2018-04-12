@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8eefb6d-96a1-4447-a5c5-f5a2dabe2aee" name="默认的" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2014214183-汪勇城-14计科对口-基于PHP的工单派发与管理系统的设计与实现.doc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/TaskController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/TaskController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Task/EditWork.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Task/EditWork.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Task/SendTask.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Task/SendTask.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Task/taskList.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Task/taskList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/8a7126c89423d6966cdfd2bacc5a3128.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/8a7126c89423d6966cdfd2bacc5a3128.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/ef8368bcb55887278b31745283749320.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/ef8368bcb55887278b31745283749320.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/999fe31c88d517408ae8d683314276da.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/999fe31c88d517408ae8d683314276da.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/e1d714e59a373a997f4e291727fb2a6e.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/e1d714e59a373a997f4e291727fb2a6e.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,54 +22,27 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TaskController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TaskController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/TaskController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="191" column="14" lean-forward="false" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+            <state relative-caret-position="378">
+              <caret line="199" column="41" lean-forward="false" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/User/addUser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="98" column="37" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="98" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditWork.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/EditWork.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1869">
-              <caret line="89" column="17" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h2#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="taskList.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="taskList.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/taskList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="699">
+              <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#form#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#if#0;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#0;n#fieldset#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#if#0;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#0;n#fieldset#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#if#0;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#0;n#fieldset#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,8 +51,8 @@
       <file leaf-file-name="SendTask.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/SendTask.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-714">
-              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="462">
+              <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
@@ -85,7 +61,7 @@
                 <element signature="n#style#0;n#input#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#form#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,13 +114,13 @@
       <find>dum</find>
       <find>dump</find>
       <find>F</find>
-      <find>user</find>
       <find>id</find>
       <find>deleteUser</find>
       <find>data</find>
       <find>task_id</find>
       <find>session</find>
       <find>task</find>
+      <find>user</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,11 +145,11 @@
         <option value="$PROJECT_DIR$/Application/Admin/View/User/index.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/User/addUser.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/AdminTaskListModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Task/SendTask.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Task/index.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Task/EditWork.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Task/taskList.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Task/SendTask.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/TaskController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Task/taskList.html" />
       </list>
     </option>
   </component>
@@ -350,8 +326,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,11 +443,13 @@
       <workItem from="1523022512251" duration="10759000" />
       <workItem from="1523243999814" duration="1073000" />
       <workItem from="1523253830134" duration="2956000" />
+      <workItem from="1523411836842" duration="6440000" />
+      <workItem from="1523539103358" duration="4885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87997000" />
+    <option name="totallyTimeSpent" value="99322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -853,43 +831,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/SendTask.html">
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="945">
+          <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/User/addUser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
-          <caret line="98" column="37" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="98" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-          <folding />
+          <caret line="98" column="37" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="98" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/EditWork.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1869">
-          <caret line="89" column="17" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+        <state relative-caret-position="189">
+          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="64" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
@@ -904,22 +863,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/taskList.html">
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/TaskController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        <state relative-caret-position="378">
+          <caret line="199" column="41" lean-forward="false" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/SendTask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#h2#0;n#form#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#if#0;n#div#0;n#div#0;n#volist#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/TaskController.class.php">
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Task/taskList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="191" column="14" lean-forward="false" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="699">
+          <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#form#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#if#0;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#0;n#fieldset#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#if#0;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#0;n#fieldset#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#if#0;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#0;n#fieldset#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,7 +4,7 @@
 <!--    <if condition="$state eq 0 ">已创建未接单   //判断订单状态画上对应图标
         <else /> 已接单
     </if>-->
-    <input type="text" name = "task_id" value="{$work_info.id}" style="display: none">
+    <input type="text" name = "work_id" value="{$work_info.id}" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
         <div class="layui-input-inline">
@@ -70,11 +70,13 @@
             {
                 layer.alert('此任务已被接单，为了安全起见无法操作！', {
                     title: '警告'
+                })
+
             }else
                 {
-                    var taskInfo = data.field;
-                    var url = "updateTask";
-                    $.post(url, taskInfo, function (data) {
+                    var workInfo = data.field;
+                    var url = "updateWorks";
+                    $.post(url, workInfo, function (data) {
                         if (data.status == 'error') {
                             layer.msg(data.msg, {icon: 5});//失败的表情
                             return;

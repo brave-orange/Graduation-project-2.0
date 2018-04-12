@@ -154,6 +154,9 @@ class TaskController extends CommonController
                 case "exeid":
                     $exeid = $value;
                     break;
+                case "level":
+                    $level = $value;
+                    break;
                 default:
                     $arr[$key] = $value;
             }
@@ -167,8 +170,8 @@ class TaskController extends CommonController
           'checkid'=>$checkid,
           'state'=>0,
           'time'=>time(),
-          'data'=>$formdata
-
+          'data'=>$formdata,
+          'lenel'=>$level
         );
         $res = M('admin_task')->add($data);
         if($res)
@@ -178,22 +181,34 @@ class TaskController extends CommonController
             $this->ajaxError('插入内容出错！');
         }
     }
-    public function taskList()
+    public function taskList($where='')
     {
+        if($_GET['createid'] != '')
+        {
+            foreach ($_GET as $key=>$value){
+                if($value != ''){
+                    $where[$key] = $value;
+                }
+            }
+        }
+
         $data = M('admin_task as a')
             ->join('left join admin_user as b ON a.createid = b.id')
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state');
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->where($where)
+            ->select();
         $user_info = M('admin_user')->field('id,user_name')->select();
+
         if(IS_POST)
         {
-            //$cid = I('post.');
 
         }else{
-            $data->select();
+
             $this->assign(array('data'=>$data,'user_info'=>$user_info));
+
             $this->display();
         }
 
@@ -212,5 +227,47 @@ class TaskController extends CommonController
         }else{
             $this->ajaxError("删除失败");
         }
+    }
+    public function updateWorks()
+    {
+
+        foreach ($_POST as  $key => $value) {
+
+            switch ($key) {
+                case "work_id":
+                    $id = $value;
+                    break;
+                case "user_id":
+                    $createid = $value;
+                    break;
+                case "checkid":
+                    $checkid = $value;
+                    break;
+                case "exeid":
+                    $exeid = $value;
+                    break;
+                default:
+                    $arr[$key] = $value;
+
+
+            }
+        }
+            $formdata = json_encode($arr,JSON_UNESCAPED_UNICODE);
+            $data = array(
+                'exeid'=>$exeid,
+                'checkid'=>$checkid,
+                'data'=>$formdata
+            );
+            //var_dump($data);
+            $ret = M('admin_task')->where(array('id'=>$id))->save($data);
+
+            if($ret){
+                $this->ajaxSuccess("更新成功");
+            }else{
+                $this->ajaxError("更新失败");
+
+            }
+
+
     }
 }

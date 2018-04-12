@@ -1,0 +1,807 @@
+[ 2018-04-11T09:59:52+08:00 ] ::1 /test/index.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/login' AND `status` = 1 LIMIT 1   [ RunTime:0.0350s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.282000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.282000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.036000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-11T09:59:53+08:00 ] ::1 /test/index.php/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/verify' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.236000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.236000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:00:04+08:00 ] ::1 /test/index.php/Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/doLogin' AND `status` = 1 LIMIT 1   [ RunTime:0.0350s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.235000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.235000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_user` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: UPDATE `admin_user` SET `lastlogin_time`='1523412004' WHERE `id` = 15 [ RunTime:0.2460s ]
+
+[ 2018-04-11T10:00:05+08:00 ] ::1 /test/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.235000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.235000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0370s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','33','35','37','39','40','38','32') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:00:05+08:00 ] ::1 /test/index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.245000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.246000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:00:07+08:00 ] ::1 /test/index.php/Task/taskList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/taskList' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.231000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.231000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0350s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0340s ]
+SQL: SELECT a.id as id,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id   [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:00:14+08:00 ] ::1 /test/index.php/Task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.223000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.223000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task_list` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_task_list` WHERE `state` = 1 LIMIT 0,10   [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count E:\hisiphp\Application\Runtime\Cache\Admin\ef8368bcb55887278b31745283749320.php 第 37 行.
+NOTIC: [8] Undefined index: count E:\hisiphp\Application\Runtime\Cache\Admin\ef8368bcb55887278b31745283749320.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-11T10:00:48+08:00 ] ::1 /test/index.php/Task/taskList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/taskList' AND `status` = 1 LIMIT 1   [ RunTime:0.0350s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.251000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.251000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0350s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0350s ]
+SQL: SELECT a.id as id,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id   [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:00:57+08:00 ] ::1 /test/index.php/Task/taskList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/taskList' AND `status` = 1 LIMIT 1   [ RunTime:0.0340s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.218000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.218000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0340s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0330s ]
+SQL: SELECT a.id as id,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id   [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:01:59+08:00 ] ::1 /test/index.php/AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/authGroupList' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.236000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.236000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0880s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:02:02+08:00 ] ::1 /test/index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.230000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.230000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: work_type E:\hisiphp\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\hisiphp\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\hisiphp\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\hisiphp\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:04:07+08:00 ] ::1 /test/index.php/Task/taskList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/taskList' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.241000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.242000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0360s ]
+SQL: SELECT a.id as id,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0350s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-11T10:04:11+08:00 ] ::1 /test/index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.225000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.225000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 23  [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0350s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: state E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-11T10:04:17+08:00 ] ::1 /test/index.php/User/editUser.html?user_id=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/editUser' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.232000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.232000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_user` WHERE `id` = 18 AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:04:23+08:00 ] ::1 /test/index.php/Task/taskList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/taskList' AND `status` = 1 LIMIT 1   [ RunTime:0.0350s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.227000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.227000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0350s ]
+SQL: SELECT a.id as id,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:04:25+08:00 ] ::1 /test/index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.237000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.237000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 1  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0360s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: state E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:05:32+08:00 ] ::1 /test/index.php/Task/taskList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/taskList' AND `status` = 1 LIMIT 1   [ RunTime:0.0340s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.226000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.226000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0350s ]
+SQL: SELECT a.id as id,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0350s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:05:34+08:00 ] ::1 /test/index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.232000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.232000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 1  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0370s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: state E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:05:51+08:00 ] ::1 /test/index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.233000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.233000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 1  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0370s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: state E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:06:04+08:00 ] ::1 /test/index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0350s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.230000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.230000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 23  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0360s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: state E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-11T10:06:11+08:00 ] ::1 /test/index.php/Task/updateTask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/updateTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.235000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.235000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+ERR: 非法操作:updateTask
+
+[ 2018-04-11T10:06:15+08:00 ] ::1 /test/index.php/Task/updateTask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/updateTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.226000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.226000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+ERR: 非法操作:updateTask
+
+[ 2018-04-11T10:06:16+08:00 ] ::1 /test/index.php/Task/updateTask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/updateTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.229000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.229000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+ERR: 非法操作:updateTask
+
+[ 2018-04-11T10:06:16+08:00 ] ::1 /test/index.php/Task/updateTask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/updateTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0350s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.225000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.225000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0350s ]
+ERR: 非法操作:updateTask
+
+[ 2018-04-11T10:06:16+08:00 ] ::1 /test/index.php/Task/updateTask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/updateTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0420s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.237000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.237000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+ERR: 非法操作:updateTask
+
+[ 2018-04-11T10:06:17+08:00 ] ::1 /test/index.php/Task/updateTask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/updateTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.236000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.237000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+ERR: 非法操作:updateTask
+
+[ 2018-04-11T10:06:17+08:00 ] ::1 /test/index.php/Task/updateTask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/updateTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.234000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.234000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0380s ]
+ERR: 非法操作:updateTask
+
+[ 2018-04-11T10:22:52+08:00 ] ::1 /test/index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0360s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.239000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.239000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0360s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 1  [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0360s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0360s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: state E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-11T10:22:57+08:00 ] ::1 /test/index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0370s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.239000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.239000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminTaskListModel::Create() should be compatible with Think\Model::create($data = '', $type = '') E:\hisiphp\Application\Admin\Model\AdminTaskListModel.class.php 第 71 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0370s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 1  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0370s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0360s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: state E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\hisiphp\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

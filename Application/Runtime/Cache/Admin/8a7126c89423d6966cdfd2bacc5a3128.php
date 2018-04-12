@@ -1,9 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?>
 <form class="layui-form"enctype="multipart/form-data">
     <h2 style="margin-left: 20px;color:#1E9FFF;font-weight: bolder;font-size: 20px;margin: 20px;"><?php echo ($task["name"]); ?></h2>
-    <?php if($state == 0 ): ?>已创建未接单
-        <?php else: ?> 已接单<?php endif; ?>
-    <input type="text" name = "task_id" value="<?php echo ($work_info["id"]); ?>" style="display: none">
+<!--    <?php if($state == 0 ): ?>已创建未接单   //判断订单状态画上对应图标
+        <?php else: ?> 已接单<?php endif; ?>-->
+    <input type="text" name = "work_id" value="<?php echo ($work_info["id"]); ?>" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
         <div class="layui-input-inline">
@@ -56,22 +56,31 @@
             $ = layui.jquery
         //监听提交
         form.on('submit(task)', function(data){
-            var taskInfo = data.field;
-            var url = "updateTask";
-            $.post(url,taskInfo,function(data){
-                if(data.status == 'error'){
-                    layer.msg(data.msg,{icon: 5});//失败的表情
-                    return;
-                }else if(data.status == 'success'){
-                    layer.msg(data.msg, {
-                        icon: 6,//成功的表情
-                        time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                    }, function(){
-                        location.reload();
-                    });
-                }
-            })
+            var state = '<?php echo ($work_info["state"]); ?>'
+            if(state != 0)
+            {
+                layer.alert('此任务已被接单，为了安全起见无法操作！', {
+                    title: '警告'
+                })
 
+            }else
+                {
+                    var workInfo = data.field;
+                    var url = "updateWorks";
+                    $.post(url, workInfo, function (data) {
+                        if (data.status == 'error') {
+                            layer.msg(data.msg, {icon: 5});//失败的表情
+                            return;
+                        } else if (data.status == 'success') {
+                            layer.msg(data.msg, {
+                                icon: 6,//成功的表情
+                                time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                            }, function () {
+                                location.reload();
+                            });
+                        }
+                    })
+                }
             return false;//阻止表单跳转
         });
         $(function () {
