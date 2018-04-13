@@ -21,8 +21,15 @@ class TaskController extends CommonController
     public function index()
     {
         $task_list = $this->admin_task_model->getTaskList();
-        $this->assign('task_list',$task_list['list']);
-        $this->assign('page',$task_list['page']);
+  /*      $userid = $_SESSION['user_info']['id'];
+        $role = M('admin_auth_group_access')->where(array('uid'=>$userid,'group_id'=>27))->field('group_id')->find();
+        if($role == null)
+        {
+
+        }else {*/
+            $this->assign('task_list', $task_list['list']);
+            $this->assign('page', $task_list['page']);
+
         $this->display();
     }
     public function SendTask()
@@ -181,16 +188,9 @@ class TaskController extends CommonController
             $this->ajaxError('插入内容出错！');
         }
     }
-    public function taskList($where='')
+    public function taskList()
     {
-        if($_GET['createid'] != '')
-        {
-            foreach ($_GET as $key=>$value){
-                if($value != ''){
-                    $where[$key] = $value;
-                }
-            }
-        }
+
 
         $data = M('admin_task as a')
             ->join('left join admin_user as b ON a.createid = b.id')
@@ -198,9 +198,10 @@ class TaskController extends CommonController
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
             ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
-            ->where($where)
+
             ->select();
         $user_info = M('admin_user')->field('id,user_name')->select();
+
 
         if(IS_POST)
         {
@@ -267,7 +268,6 @@ class TaskController extends CommonController
                 $this->ajaxError("更新失败");
 
             }
-
-
     }
+
 }

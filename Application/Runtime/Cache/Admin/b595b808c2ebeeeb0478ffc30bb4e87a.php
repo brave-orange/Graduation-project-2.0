@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="/test/Public/plugins/layui/css/layui.css" media="all" />
 		<link rel="stylesheet" href="/test/Public/css/global.css" media="all">
 		<link rel="stylesheet" href="/test/Public/plugins/font-awesome/css/font-awesome.min.css">
-		<script type="text/javascript" src="/test/Public/plugins/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/test/Public/plugins/jquery-1.9.1.min.js"></script>
 	</head>
 
 	<body>

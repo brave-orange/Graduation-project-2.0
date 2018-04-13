@@ -92,7 +92,7 @@
                         <td style="background-color: #F7B824;">中</td>
                         <?php else: ?>
                         <td style="background-color: red;">高</td><?php endif; ?>
-                    
+
                     <td><?php echo ($vo["state"]); ?></td>
                     <td>
                         <a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>

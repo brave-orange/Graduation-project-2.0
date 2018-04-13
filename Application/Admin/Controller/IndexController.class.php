@@ -38,6 +38,26 @@ class IndexController extends CommonController {
     
     public function main()
     {
+        $userid = $_SESSION['user_info']['id'];
+        $where =  array('checkid'=>$userid,'a.state'=>0);
+        $check = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->where($where)
+            ->select();
+        $where =  array('exeid'=>$userid);
+        $exe = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->where($where)
+            ->select();
+        $this->assign(array('check_num'=>count($check),'exe_num'=>count($exe),'check_info'=>$check,'exe_info'=>$exe));
         $this->display();
     }
     public function upload()
@@ -81,5 +101,22 @@ class IndexController extends CommonController {
         $Verify->fontttf = "5.ttf";
         $Verify->bg = array(196,223,246);    
         $Verify->entry();    
+    }
+
+    public function getSbWorkinfo(){
+        $uid = $_POST['uid'];
+
+        $exe_num = M('admin_task')
+            ->where(array('exeid'=>$uid))
+            ->count();
+        $check_num = M('admin_task')
+            ->where(array('checkid'=>$uid))
+            ->count();
+        $create_num = M('admin_task')
+            ->where(array('createid'=>$uid))
+            ->count();
+        //$str = "[{value:$create_num,name:'我创建任务数'},{value:$exe_num,name:'我执行任务数'},{value:$check_num,name:'我审核任务数'}]";
+        $str = array(array('value'=>$create_num,'name'=>'我创建任务数'),array('value'=>$exe_num,'name'=>'我执行任务数'),array('value'=>$check_num,'name'=>'我审核任务数'));
+        $this->ajaxReturn($str);
     }
 }
