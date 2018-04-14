@@ -115,8 +115,10 @@ class IndexController extends CommonController {
         $create_num = M('admin_task')
             ->where(array('createid'=>$uid))
             ->count();
-        //$str = "[{value:$create_num,name:'我创建任务数'},{value:$exe_num,name:'我执行任务数'},{value:$check_num,name:'我审核任务数'}]";
         $str = array(array('value'=>$create_num,'name'=>'我创建任务数'),array('value'=>$exe_num,'name'=>'我执行任务数'),array('value'=>$check_num,'name'=>'我审核任务数'));
         $this->ajaxReturn($str);
+    }
+    public function getSbWorkinfoFortime(){
+
     }
 }

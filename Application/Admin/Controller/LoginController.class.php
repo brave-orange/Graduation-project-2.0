@@ -15,7 +15,7 @@ class LoginController extends Controller {
     
     /**
      * 登录操作
-     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
+     * @author yongchengwang
      */
     public function doLogin()
     {
