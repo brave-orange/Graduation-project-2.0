@@ -52,12 +52,12 @@
             <div class="layui-input-inline">
                 <select name="state">
                     <option value ="">请选择</option>
-                    <option value ="0">0</option>
-                    <option value ="1">1</option>
-                    <option value ="2">2</option>
-                    <option value ="3">3</option>
-                    <option value ="4">4</option>
-
+                    <option value ="0">未接单</option>
+                    <option value ="1">已接单</option>
+                    <option value ="2">被拒接</option>
+                    <option value ="3">待审核</option>
+                    <option value ="4">未完成</option>
+                    <option value ="5">已完成</option>
                 </select>
             </div>
             <button class="layui-btn" lay-submit lay-filter="look" style="margin-left: 30px;"  lay-submit lay-filter="user">查看</button>
@@ -102,7 +102,22 @@
                         <td style="background-color: red;">高</td>
                     </if>
 
-                    <td>{$vo.state}</td>
+                    <td>
+
+                        <if condition="($vo.state eq 0)">
+                            未接单
+                        <elseif condition="$vo.state eq 1"/>
+                            已接单
+                        <elseif condition="$vo.state eq 2"/>
+                            被拒接
+                        <elseif condition="$vo.state eq 3"/>
+                            待审核
+                        <elseif condition="$vo.state eq 4"/>
+                            未完成
+                        <elseif condition="$vo.state eq 5"/>
+                            已完成
+                        </if>
+                    </td>
                     <td>
                         <a data="{$vo.id}" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
                         <a  data="{$vo.id}" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>

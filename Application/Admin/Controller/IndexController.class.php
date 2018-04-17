@@ -39,8 +39,8 @@ class IndexController extends CommonController {
     public function main()
     {
         $userid = $_SESSION['user_info']['id'];
-        $where =  array('checkid'=>$userid,'a.state'=>0);
-        $check = M('admin_task as a')
+        $where =  array('exeid'=>$userid,'a.state'=>0);
+        $recive = M('admin_task as a') //待接单任务
             ->join('left join admin_user as b ON a.createid = b.id')
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
@@ -48,8 +48,8 @@ class IndexController extends CommonController {
             ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
             ->where($where)
             ->select();
-        $where =  array('exeid'=>$userid);
-        $exe = M('admin_task as a')
+        $where =  array('checkid'=>$userid,'a.state'=>3);
+        $check = M('admin_task as a')//待审核
             ->join('left join admin_user as b ON a.createid = b.id')
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
@@ -57,7 +57,17 @@ class IndexController extends CommonController {
             ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
             ->where($where)
             ->select();
-        $this->assign(array('check_num'=>count($check),'exe_num'=>count($exe),'check_info'=>$check,'exe_info'=>$exe));
+        $where =  array('exeid'=>$userid,'a.state'=>1);
+        $exe = M('admin_task as a')    //待执行
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->where($where)
+            ->select();
+
+        $this->assign(array('recive_num'=>count($recive),'check_num'=>count($check),'exe_num'=>count($exe),'check_info'=>$check,'exe_info'=>$exe,'recive'=>$recive));
         $this->display();
     }
     public function upload()

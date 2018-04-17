@@ -21,7 +21,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">选择执行人</label>
         <div class="layui-input-inline">
-            <select name="exeid" id = "exeid">
+            <select name="exeid" id = "">
                 <?php if(is_array($user_info1)): $i = 0; $__LIST__ = $user_info1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($vo["id"]); ?>"><?php echo ($vo["user_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
         </div>

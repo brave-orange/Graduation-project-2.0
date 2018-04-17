@@ -46,12 +46,12 @@
             <div class="layui-input-inline">
                 <select name="state">
                     <option value ="">请选择</option>
-                    <option value ="0">0</option>
-                    <option value ="1">1</option>
-                    <option value ="2">2</option>
-                    <option value ="3">3</option>
-                    <option value ="4">4</option>
-
+                    <option value ="0">未接单</option>
+                    <option value ="1">已接单</option>
+                    <option value ="2">被拒接</option>
+                    <option value ="3">待审核</option>
+                    <option value ="4">未完成</option>
+                    <option value ="5">已完成</option>
                 </select>
             </div>
             <button class="layui-btn" lay-submit lay-filter="look" style="margin-left: 30px;"  lay-submit lay-filter="user">查看</button>
@@ -93,7 +93,20 @@
                         <?php else: ?>
                         <td style="background-color: red;">高</td><?php endif; ?>
 
-                    <td><?php echo ($vo["state"]); ?></td>
+                    <td>
+
+                        <?php if(($vo["state"] == 0)): ?>未接单
+                        <?php elseif($vo["state"] == 1): ?>
+                            已接单
+                        <?php elseif($vo["state"] == 2): ?>
+                            被拒接
+                        <?php elseif($vo["state"] == 3): ?>
+                            待审核
+                        <?php elseif($vo["state"] == 4): ?>
+                            未完成
+                        <?php elseif($vo["state"] == 5): ?>
+                            已完成<?php endif; ?>
+                    </td>
                     <td>
                         <a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
                         <a  data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>

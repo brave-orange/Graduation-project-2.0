@@ -47,7 +47,7 @@
 							<a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
 							<a  data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>
 					      	<a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini role"><i class="layui-icon">&#xe608;</i>分配角色</a>
-							  <a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini worktype"><i class="layui-icon">&#xe608;</i>绑定工种</a>
+							 <!-- <a data="<?php echo ($vo["id"]); ?>" class="layui-btn layui-btn-mini worktype"><i class="layui-icon">&#xe608;</i>绑定工种</a>-->
 					      </td>
 					    </tr><?php endforeach; endif; ?>
 					  </tbody>

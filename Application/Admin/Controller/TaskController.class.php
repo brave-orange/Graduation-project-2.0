@@ -61,7 +61,6 @@ class TaskController extends CommonController
         $form_data = M('admin_form_type')
             ->where(array('Tid'=>$work_info['tid']))
             ->select();
-
         $s = array(27, 28, 29, 30);
         $user_info = M('admin_user as a')
             ->join('admin_auth_group_access as b ON a.id = b.uid')
@@ -69,14 +68,39 @@ class TaskController extends CommonController
             ->where(array('b.group_id' => array('IN', $s)))
             ->select();//就这几个级别的能当审核人
         $user_info1 = M('admin_user')->field('id,user_name')->select();
-
         //传回表单数据、工单数据、所有用户数据（用于选审核、执行人等）
-
         $this->assign(array('form_data' => $form_data, 'work_info' => $work_info,'user_info' => $user_info, 'user_info1' => $user_info1,'task' => $task,'user'=>$user) );
         $this->display('');
 
 
     }
+    public function ReciveWork()
+    {
+        $work_id = I('post.work_id', '', 'intval');
+
+        $data = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as taskname ,b.user_name as createname ,c.user_name as exename, d.user_name as checkname ,a.state as state,a.data as data')
+            ->where(array('a.id'=>$work_id))
+            ->select();
+
+
+        $form_data = M('admin_form_type')
+            ->where(array('Tid'=>$data[0]['taskid']))
+            ->select();
+
+        //传回表单数据、工单数据
+
+
+        $this->assign(array('form_data' => $form_data, 'work_info' => $data[0]) );
+        $this->display('');
+
+
+    }
+
     public function getTaskInfo()
     {
         $task_id = I('post.task_id', '', 'intval');
@@ -190,6 +214,15 @@ class TaskController extends CommonController
     }
     public function taskList()
     {
+        $where = array();
+        if(count($_GET)>0)
+        {
+            foreach ($_GET as $key=>$value){
+                if($value != ''){
+                    $where['a.'.$key] = $value;
+                }
+            }
+        }
 
 
         $data = M('admin_task as a')
@@ -198,13 +231,14 @@ class TaskController extends CommonController
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
             ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
-
+            ->where($where)
             ->select();
         $user_info = M('admin_user')->field('id,user_name')->select();
 
 
         if(IS_POST)
         {
+
 
         }else{
 
@@ -268,6 +302,42 @@ class TaskController extends CommonController
                 $this->ajaxError("更新失败");
 
             }
+    }
+    public function recive()
+    {
+        $workid = I('post.workid','', 'intval');
+
+        $ret = M('admin_task')->where(array('id'=>$workid))->save(array('state'=>'1'));
+        if($ret)
+        {
+            $this->ajaxSuccess("接单成功");
+        }else{
+            $this->ajaxSuccess("接单失败");
+        }
+    }
+    public function FeedbackWork()
+    {
+        $work_id = I('post.work_id', '', 'intval');
+
+        $data = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as taskname ,b.user_name as createname ,c.user_name as exename, d.user_name as checkname ,a.state as state,a.data as data')
+            ->where(array('a.id'=>$work_id))
+            ->select();
+
+
+        $form_data = M('admin_form_type')
+            ->where(array('Tid'=>$data[0]['taskid']))
+            ->select();
+
+        //传回表单数据、工单数据
+
+
+        $this->assign(array('form_data' => $form_data, 'work_info' => $data[0]) );
+        $this->display('');
     }
 
 }
