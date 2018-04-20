@@ -50,7 +50,7 @@
     <div class="layui-form-item" style="margin-top: 50px;"id="sub">
         <div class="layui-input-block">
 
-            <button class="layui-btn"  lay-submit lay-filter="" id="feedback" style="margin-left: 30px;"  lay-submit lay-filter="user">提交反馈</button>
+            <button class="layui-btn"  lay-submit lay-filter="feedback" id="feedback" style="margin-left: 30px;"  lay-submit lay-filter="user">提交反馈</button>
             <button type="cancel" id="btn" class="layui-btn layui-btn-primary">取消</button>
         </div>
     </div>
@@ -79,17 +79,20 @@
             $('#exeid').val(eid)
         })
         $('#feedback').click(function(){
+
             var workid = "{$work_info.id}"
+            var back = $('#feedbackbody').val();
+            var url = "{:U('Task/FeedBack')}";
+
             console.log(workid)
-            var url = "{:U('Task/recive')}";
-            $.post(url,{'workid':workid},function(data) {
+            $.post(url,{'text':back,'workid':workid},function(data) {
                 if(data.status == 'error'){
                     layer.msg(data.msg,{icon: 5,time: 2000});//失败的表情
                     return;
                 }else {
                     layer.msg(data.msg, {
                         icon: 6,//成功的表情
-                        time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                        time: 3000 //2秒关闭（如果不配置，默认是3秒）
                     }, function () {
                         location.reload();
                     })

@@ -312,11 +312,14 @@ class TaskController extends CommonController
         {
             $this->ajaxSuccess("接单成功");
         }else{
-            $this->ajaxSuccess("接单失败");
+            $this->ajaxError("接单失败");
         }
     }
     public function FeedbackWork()
     {
+
+
+
         $work_id = I('post.work_id', '', 'intval');
 
         $data = M('admin_task as a')
@@ -338,6 +341,54 @@ class TaskController extends CommonController
 
         $this->assign(array('form_data' => $form_data, 'work_info' => $data[0]) );
         $this->display('');
+    }
+
+    public function FeedBack(){
+        $back = I('post.text');
+        $workid = I('post.workid');
+        $data['back_note'] = $back;
+        $data['exe_time'] = time();
+        $data['state'] = 3;
+        $ret = M('admin_task')->where(array('id'=>$workid))->save($data);
+        if($ret)
+        {
+            $this->ajaxSuccess("反馈成功");
+        }else{
+            $this->ajaxError("反馈失败");
+
+        }
+    }
+    public function CheckWork(){
+        $workid  =  I("post.work_id");
+        $data = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as taskname ,b.user_name as createname ,c.user_name as exename, d.user_name as checkname ,a.state as state,a.data as data,back_note')
+            ->where(array('a.id'=>$workid))
+            ->select();
+        $form_data = M('admin_form_type')
+            ->where(array('Tid'=>$data[0]['taskid']))
+            ->select();
+        $this->assign(array('form_data' => $form_data, 'work_info' => $data[0]) );
+        $this->display('');
+    }
+
+    public function Pass(){
+        $check_note = I('post.text');
+        $workid = I('post.workid');
+        $data['check_note'] = $check_note;
+        $data['check_time'] = time();
+        $data['state'] = 5;
+        $ret = M('admin_task')->where(array('id'=>$workid))->save($data);
+        if($ret)
+        {
+            $this->ajaxSuccess("审核成功");
+        }else{
+            $this->ajaxError("审核失败");
+
+        }
     }
 
 }

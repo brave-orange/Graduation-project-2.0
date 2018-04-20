@@ -20,7 +20,7 @@ class AuthGroupController extends CommonController {
     
     /**
      * 添加角色页面显示
-     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
+     * @author yongcheng
      */
     public function addGroup()
     {   
@@ -50,7 +50,7 @@ class AuthGroupController extends CommonController {
     
     /**
      * 编辑角色页面显示
-     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
+     * @author yongcheng
      */
     public function editGroup()
     {
@@ -109,8 +109,9 @@ class AuthGroupController extends CommonController {
     
     /**
      * 分配角色
-     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
+     * @author yongcheng
      */
+    //分配角色
     public function giveRole()
     {
         if(IS_POST){
