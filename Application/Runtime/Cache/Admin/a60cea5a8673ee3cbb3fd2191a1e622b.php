@@ -1,8 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<form class="layui-form"enctype="multipart/form-data">
+<form class="layui-form"  id = "recive-form"enctype="multipart/form-data">
     <h2 style="margin-left: 20px;color:#1E9FFF;font-weight: bolder;font-size: 20px;margin: 20px;"><?php echo ($work_info["taskname"]); ?></h2>
     <!--    <?php if($state == 0 ): ?>已创建未接单   //判断订单状态画上对应图标
             <?php else: ?> 已接单<?php endif; ?>-->
+    <div id="inputs">
     <input type="text" name = "work_id" value="<?php echo ($work_info["id"]); ?>" style="display: none">
     <div class="layui-form-item">
         <label class="layui-form-label">创建人</label>
@@ -38,14 +39,24 @@
             </if>
 
         </div><?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+    <div id="dialog_show" style="display: none;">
+        <div class="layui-form-item">
+            <label class="layui-form-label">拒接理由</label>
+            <div class="layui-input-inline">
+                <input type="text" style="width: 250px;"   placeholder="请输入用户名" id="goaway1"  class="layui-input">
+            </div>
+        </div>
+    </div>
 
-    <div class="layui-form-item" style="margin-top: 50px;"id="sub">
-        <div class="layui-input-block">
-            <button class="layui-btn"  lay-submit lay-filter="" id="recive" style="margin-left: 30px;"  lay-submit lay-filter="user">确认接单</button>
-            <button type="reset" id="btn" class="layui-btn layui-btn-primary">拒接</button>
+    <div class="layui-form-item" style="width:300px;"id="sub">
+        <div style="margin-left:150px;">
+            <button class="layui-btn" lay-submit lay-filter="task" id="recive"  lay-submit lay-filter="user">接单</button>
+            <button type="button" id="goaway" class="layui-btn">拒接</button>
         </div>
     </div>
 </form>
+
 <script>
 
     layui.use('form', function(){
@@ -73,19 +84,42 @@
             var workid = "<?php echo ($work_info["id"]); ?>"
             console.log(workid)
             var url = "<?php echo U('Task/recive');?>";
-            $.post(url,{'workid':workid},function(data) {
-                if(data.status == 'error'){
-                    layer.msg(data.msg,{icon: 5,time: 2000});//失败的表情
-                    return;
-                }else {
-                    layer.msg(data.msg, {
-                        icon: 6,//成功的表情
-                        time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                    }, function () {
-                        location.reload();
-                    })
-                }
+            //var arr = $(recive-form).serializeArray();
+            var go = true
+                $('#recive-form').each(function () {
+                    if($(this).val() == '')
+                    {
+                        console.log("adadad")
+                        go = false
+                    }
             })
+            if(go){
+                $.post(url,{'workid':workid},function(data) {
+                    if(data.status == 'error'){
+                        layer.msg(data.msg,{icon: 5,time: 2000});//失败的表情
+                        return;
+                    }else {
+                        layer.msg(data.msg, {
+                            icon: 6,//成功的表情
+                            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                        }, function () {
+                            location.reload();
+                        })
+                    }
+                })
+            }
+
+        })
+        $('#goaway').click(function(){
+            if($('#dialog_show').attr("style") == "display: none;")
+            {
+                $('#dialog_show').css({ "display": "block" })
+                $('#dialog_show').attr({"lay-verify":"required"})
+            }
+            
+
+
+
         })
 
 

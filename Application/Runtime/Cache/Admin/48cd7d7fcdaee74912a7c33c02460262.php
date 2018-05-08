@@ -50,7 +50,7 @@
         <div class="layui-input-block">
 
             <a  class="layui-btn  layui-btn-normal pass"><i class="layui-icon">&#xe618;</i> 通过</a>
-            <a  class="layui-btn  layui-btn-normal fail"><i class="layui-icon">&#xe640;</i> 通过</a>
+            <a  class="layui-btn  layui-btn-normal fail"><i class="layui-icon">&#xe640;</i> 不通过</a>
         </div>
     </div>
 
@@ -98,7 +98,7 @@
                             icon: 6,//成功的表情
                             time: 3000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            //location.reload();
+                            location.reload();
                         })
                     }
                 })
