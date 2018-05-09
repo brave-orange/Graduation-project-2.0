@@ -44,7 +44,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">拒接理由</label>
             <div class="layui-input-inline">
-                <input type="text" style="width: 250px;"   placeholder="请输入用户名" id="goaway1"  class="layui-input">
+                <input type="text" style="width: 250px;"   placeholder="请输入拒绝理由" id="goaway1"  class="layui-input">
             </div>
         </div>
     </div>
@@ -116,9 +116,24 @@
                 $('#dialog_show').css({ "display": "block" })
                 $('#dialog_show').attr({"lay-verify":"required"})
             }
-            
-
-
+            if($('#goaway1').val() != ""){
+                var url = "<?php echo U('Task/goback');?>"
+                var reson = $('#goaway1').val()
+                var workid = "<?php echo ($work_info["id"]); ?>"
+                $.post(url,{'workid':workid,'reson':reson},function(data){
+                    if(data.status == 'error'){
+                        layer.msg(data.msg,{icon: 5,time: 2000});//失败的表情
+                        return;
+                    }else {
+                        layer.msg(data.msg, {
+                            icon: 6,//成功的表情
+                            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                        }, function () {
+                            location.reload();
+                        })
+                    }
+                })
+            }
 
         })
 

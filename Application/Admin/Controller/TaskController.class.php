@@ -391,4 +391,18 @@ class TaskController extends CommonController
         }
     }
 
+    public function goback()   ///拒接工单
+    {
+        $workid = I('post.workid');
+        $reson = I('post.reason');
+        $data = array('state'=>2,'remark'=>$reson);//状态改为被拒接，添加备注
+        $res = M('admin_task')->where(array('id'=>$workid))->save($data);
+        if($res){
+            $this->ajaxSuccess("已拒绝该任务");
+        }else{
+            $this->ajaxError("出现错误");
+
+        }
+    }
+
 }
