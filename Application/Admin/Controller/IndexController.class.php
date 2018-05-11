@@ -45,7 +45,7 @@ class IndexController extends CommonController {
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state,a.title as title')
             ->where($where)
             ->select();
         $where =  array('checkid'=>$userid,'a.state'=>3);
@@ -54,7 +54,7 @@ class IndexController extends CommonController {
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state,a.title as title')
             ->where($where)
             ->select();
         $where =  array('exeid'=>$userid,'a.state'=>1);
@@ -63,7 +63,7 @@ class IndexController extends CommonController {
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state,a.title as title')
             ->where($where)
             ->select();
         $where = array('exeid'=>$userid,'a.state'=>array('GT',1));
@@ -72,7 +72,7 @@ class IndexController extends CommonController {
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state,a.title as title')
             ->where($where)
             ->select();
         $this->assign(array('recive_num'=>count($recive),'check_num'=>count($check),'exe_num'=>count($exe),'check_info'=>$check,'exe_info'=>$exe,'recive'=>$recive,'ing_info'=>$ing));
@@ -136,7 +136,17 @@ class IndexController extends CommonController {
         $str = array(array('value'=>$create_num,'name'=>'我创建任务数'),array('value'=>$exe_num,'name'=>'我执行任务数'),array('value'=>$check_num,'name'=>'我审核任务数'));
         $this->ajaxReturn($str);
     }
-    public function getSbWorkinfoFortime(){
-
+    public function getSbWorkcount(){      //七天的工作分布的工作
+        $date = strtotime(date('Y-m-d',time()))-604800;
+        $uid = $_POST['uid'];
+        while($date<strtotime(date('Y-m-d',time()))){
+            $exe[] = M('admin_task')->where(array('exe_time'=>array('between',array($date,$date+86400)),'exeid'=>$uid))->count();
+            $check[] = M('admin_task')->where(array('check_time'=>array('between',array($date,$date+86400)),'checkid'=>$uid))->count();
+            $create[] = M('admin_task')->where(array('time'=>array('between',array($date,$date+86400)),'createid'=>$uid))->count();
+            $date1[] = date('m-d',$date);
+            $date += 86400;
+        }
+        $str = array('exe'=>$exe,'check'=>$check,'create'=>$create,'date'=>$date1);
+        $this->ajaxReturn($str);
     }
 }

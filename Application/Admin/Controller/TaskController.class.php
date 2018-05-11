@@ -196,6 +196,7 @@ class TaskController extends CommonController
         $data = array(
           'id'=>'',
           'tid'=>$tid,
+          'title'=>$arr['zhaiyao'],
           'createid'=>$createid,
           'exeid'=>$exeid,
           'checkid'=>$checkid,
@@ -230,11 +231,15 @@ class TaskController extends CommonController
             ->join('left join admin_user as c ON a.exeid = c.id')
             ->join('left join admin_user as d ON a.checkid = d.id')
             ->join('left join admin_task_list as e ON a.tid = e.id')
-            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state')
+            ->field('a.id as id ,a.level,a.tid as taskid ,e.name as tid ,b.user_name as createid ,c.user_name as exeid, d.user_name as checkid , a.time as time,a.state as state,a.data as data')
             ->where($where)
             ->select();
-        $user_info = M('admin_user')->field('id,user_name')->select();
 
+        $user_info = M('admin_user')->field('id,user_name')->select();
+        foreach($data as &$v){
+            $a = json_decode($v['data'],true);
+            $v['title'] = $a['zhaiyao'];
+        }
 
         if(IS_POST)
         {

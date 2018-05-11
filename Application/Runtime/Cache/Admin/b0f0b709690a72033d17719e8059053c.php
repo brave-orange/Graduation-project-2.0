@@ -16,7 +16,7 @@
 			</blockquote>
 			<div style="margin: 0 auto;">
 			<div style="width: 500px;height: 400px; float: left" id="exe"></div>
-			<div style="width: 800px;height: 400px;margin-left:30px;float: left" id="execount"></div>
+			<div style="width: 800px;height: 400px;margin-left:90px;float: left" id="execount"></div>
 
 			</div>
 			<fieldset class="layui-elem-field">
@@ -31,6 +31,7 @@
 									<th>#</th>
 									<th>任务Id</th>
 									<th>所属工单</th>
+									<th>任务摘要</th>
 									<th>创建人</th>
 									<th>执行人</th>
 									<th>审核人</th>
@@ -45,6 +46,7 @@
 										<td><?php echo ($k+1); ?></td>
 										<td><?php echo ($vo["id"]); ?></td>
 										<td><?php echo ($vo["tid"]); ?></td>
+										<td><?php echo ($vo["title"]); ?></td>
 										<td><?php echo ($vo["createid"]); ?></td>
 										<td><?php echo ($vo["exeid"]); ?></td>
 										<td><?php echo ($vo["checkid"]); ?></td>
@@ -87,6 +89,7 @@
 							<th>#</th>
 							<th>任务Id</th>
 							<th>所属工单</th>
+							<th>任务摘要</th>
 							<th>创建人</th>
 							<th>执行人</th>
 							<th>审核人</th>
@@ -101,6 +104,7 @@
 								<td><?php echo ($k+1); ?></td>
 								<td><?php echo ($vo["id"]); ?></td>
 								<td><?php echo ($vo["tid"]); ?></td>
+								<td><?php echo ($vo["title"]); ?></td>
 								<td><?php echo ($vo["createid"]); ?></td>
 								<td><?php echo ($vo["exeid"]); ?></td>
 								<td><?php echo ($vo["checkid"]); ?></td>
@@ -138,6 +142,7 @@
 									<th>#</th>
 									<th>任务Id</th>
 									<th>所属工单</th>
+									<th>任务摘要</th>
 									<th>创建人</th>
 									<th>执行人</th>
 									<th>审核人</th>
@@ -152,6 +157,7 @@
 										<td><?php echo ($k+1); ?></td>
 										<td><?php echo ($vo["id"]); ?></td>
 										<td><?php echo ($vo["tid"]); ?></td>
+										<td><?php echo ($vo["title"]); ?></td>
 										<td><?php echo ($vo["createid"]); ?></td>
 										<td><?php echo ($vo["exeid"]); ?></td>
 										<td><?php echo ($vo["checkid"]); ?></td>
@@ -193,6 +199,7 @@
 									<th>#</th>
 									<th>任务Id</th>
 									<th>所属工单</th>
+									<th>任务摘要</th>
 									<th>创建人</th>
 									<th>执行人</th>
 									<th>审核人</th>
@@ -207,6 +214,7 @@
 										<td><?php echo ($k+1); ?></td>
 										<td><?php echo ($vo["id"]); ?></td>
 										<td><?php echo ($vo["tid"]); ?></td>
+										<td><?php echo ($vo["title"]); ?></td>
 										<td><?php echo ($vo["createid"]); ?></td>
 										<td><?php echo ($vo["exeid"]); ?></td>
 										<td><?php echo ($vo["checkid"]); ?></td>
@@ -371,7 +379,7 @@
                 xAxis: {
                     type: 'category',
                     boundaryGap: false,
-                    data: ['周一','周二','周三','周四','周五','周六','周日']
+                    data: []
                 },
                 yAxis: {
                     type: 'value'
@@ -380,26 +388,26 @@
                     {
                         name:'创建任务',
                         type:'line',
-                        stack: '总量',
-                        data:[120, 132, 101, 134, 90, 230, 210]
+                        stack: '创建任务',
+                        data:[]
                     },
                     {
                         name:'执行任务',
                         type:'line',
-                        stack: '总量',
-                        data:[220, 182, 191, 234, 290, 330, 310]
+                        stack: '执行任务',
+                        data:[]
                     },
                     {
                         name:'审核任务',
                         type:'line',
-                        stack: '总量',
-                        data:[150, 232, 201, 154, 190, 330, 410]
+                        stack: '审核任务',
+                        data:[]
                     }
                 ]
             };
             myChart1.setOption(option1);
 
-                $.post('getSbWorkinfo',{'uid':'<?php echo $_SESSION["user_info"]["id"]; ?>'},function(data){
+			$.post('getSbWorkinfo',{'uid':'<?php echo $_SESSION["user_info"]["id"]; ?>'},function(data){
 
 
                     option.series[0].data = data
@@ -407,6 +415,26 @@
                     myChart.setOption(option);
 
                 })
+            $.post('getSbWorkcount',{'uid':'<?php echo $_SESSION["user_info"]["id"]; ?>'},function(data){
+                console.log(option)
+                myChart1.setOption({
+                    xAxis: {
+                        data: data.date
+                    },
+                    series: [
+                        {
+                            data:data.create
+                        },
+                        {
+                            data:data.exe
+                        },
+                        {
+                            data:data.check
+                        }
+                    ]
+				});
+
+            })
 
 
 

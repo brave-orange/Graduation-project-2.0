@@ -69,6 +69,7 @@
                 <th>#</th>
                 <th>任务Id</th>
                 <th>所属工单</th>
+                <th>任务摘要</th>
                 <th>创建人</th>
                 <th>执行人</th>
                 <th>审核人</th>
@@ -83,6 +84,7 @@
                     <td><?php echo ($k+1); ?></td>
                     <td><?php echo ($vo["id"]); ?></td>
                     <td><?php echo ($vo["tid"]); ?></td>
+                    <td><?php echo ($vo["title"]); ?></td>
                     <td><?php echo ($vo["createid"]); ?></td>
                     <td><?php echo ($vo["exeid"]); ?></td>
                     <td><?php echo ($vo["checkid"]); ?></td>

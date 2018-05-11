@@ -51,7 +51,7 @@
 
     <div class="layui-form-item" style="width:300px;"id="sub">
         <div style="margin-left:150px;">
-            <button class="layui-btn" lay-submit lay-filter="task" id="recive"  lay-submit lay-filter="user">接单</button>
+            <button type="button" class="layui-btn"  lay-filter="task" id="recive"  lay-filter="user">接单</button>
             <button type="button" id="goaway" class="layui-btn">拒接</button>
         </div>
     </div>
@@ -84,16 +84,6 @@
             var workid = "<?php echo ($work_info["id"]); ?>"
             console.log(workid)
             var url = "<?php echo U('Task/recive');?>";
-            //var arr = $(recive-form).serializeArray();
-            var go = true
-                $('#recive-form').each(function () {
-                    if($(this).val() == '')
-                    {
-                        console.log("adadad")
-                        go = false
-                    }
-            })
-            if(go){
                 $.post(url,{'workid':workid},function(data) {
                     if(data.status == 'error'){
                         layer.msg(data.msg,{icon: 5,time: 2000});//失败的表情
@@ -107,7 +97,7 @@
                         })
                     }
                 })
-            }
+            
 
         })
         $('#goaway').click(function(){

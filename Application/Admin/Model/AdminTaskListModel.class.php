@@ -22,6 +22,11 @@ class AdminTaskListModel extends BaseModel
         $page       = new \Think\Page($count,$num);
         $show       = $page->show();
         $list       = $this->where($where)->limit($page->firstRow.','.$page->listRows)->select();
+        foreach ($list as &$value)
+        {
+            $value['count'] = M('admin_task')->where(array('tid'=>$value['id']))->count();
+        }
+
 
         return array('page' => $show , 'list' => $list);
 
