@@ -1,10 +1,10 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 
 <html>
-<link rel="stylesheet" href="/test/Public/plugins/css/mine.css"  media="all">
-<link rel="stylesheet" href="/test/Public/plugins/layui/css/layui.css" media="all" />
-<script src="/test/Public/plugins/layui/layui.js" charset="utf-8"></script>
-<script type="text/javascript" src="/test/Public/plugins/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="/Public/plugins/css/mine.css"  media="all">
+<link rel="stylesheet" href="/Public/plugins/layui/css/layui.css" media="all" />
+<script src="/Public/plugins/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="/Public/plugins/jquery-1.9.1.min.js"></script>
 
 <script type="text/javascript">
     layui.use(['layer'], function() {

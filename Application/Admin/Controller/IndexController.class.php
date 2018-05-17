@@ -149,4 +149,12 @@ class IndexController extends CommonController {
         $str = array('exe'=>$exe,'check'=>$check,'create'=>$create,'date'=>$date1);
         $this->ajaxReturn($str);
     }
+
+    public function yourself(){
+        if(IS_POST){
+
+        }else{
+            $this->display();
+        }
+    }
 }

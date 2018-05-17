@@ -35,7 +35,10 @@
                     <?php elseif($vo["type"] == 1): ?>
                     <textarea style="height: 70px; width: 250px;" name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input"></textarea>
                     <?php else: ?>
-                    <input type="file" style="width: 250px;"  name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input"><?php endif; ?>
+                    <input type="file" style="width: 250px;" class="layui-upload-file" accept="image/png, image/jpeg, image/gif, image/jpg" name="<?php echo ($vo["ziduan"]); ?>1" id="upload1">
+                     <input type='text' name="<?php echo ($vo["ziduan"]); ?>"  id="<?php echo ($vo["ziduan"]); ?>" value="" onchange="loadimg('<?php echo ($vo["ziduan"]); ?>',this.value)" style="display: none;">
+
+                    <img class="layui-upload-img"  style="height:80px;width:80px;display: block;" id="<?php echo ($vo["ziduan"]); ?>1"><?php endif; ?>
             </div>
             </if>
 
@@ -59,6 +62,7 @@
             var state = '<?php echo ($work_info["state"]); ?>'
             if(state != 0)
             {
+                $('#upload1').attr('disabled',' true');
                 layer.alert('此任务已被接单，为了安全起见无法操作！', {
                     title: '警告'
                 })
@@ -83,6 +87,48 @@
                 }
             return false;//阻止表单跳转
         });
+
+        layui.use('upload', function(){
+      layui.upload({
+        url: '' //上传接口
+        ,success: function(res){ //上传成功后的回调
+          console.log(res)
+        }
+      });
+      
+          layui.upload({
+            url: "<?php echo U('Task/upload');?>"
+            ,title: '上传文件'
+            ,elem: '#upload1' //指定原始元素，默认直接查找class="layui-upload-file"
+            ,ext: 'jpg|png|gif|jpeg'
+            ,method: 'post' //上传接口的http类型
+            ,success: function(res){
+              if(res.status == 'error'){
+                  layer.msg(res.msg);
+              }else{
+                  var s = res.name
+                  s=s.substring(0,s.length-1);
+                  $('#'+s).val(res.url) 
+                  $('#'+res.name).attr('src',res.url)
+                  $('#'+res.name).css('display','block')
+                  console.log($('#'+s).val())
+
+              }
+            }
+          });
+          $("img").click(function(){
+                var src = this.src
+                console.log(src)
+                var data = "<img src=\""+src+"\" style=\"height:100%;width:100%\">"
+                layer.open({
+                    title:'图片预览',
+                    type: 1,
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['400px','400px'], //宽高
+                    content: data,
+                });
+            });
+        });
         $(function () {
             $('#btn').click();
             var a = "<?php echo $_SESSION['user_info'][id]; ?>"
@@ -95,7 +141,7 @@
            // console.log(jsonform)
             for(var key in jsonform)
             {
-                $('#'+key).val(jsonform[key])
+                $('#'+key).val(jsonform[key]).change()
             }
 
 
@@ -111,4 +157,9 @@
 
         });
     })
+
+       function loadimg(name,url){
+        var name1 = name+'1';
+        $('#'+name1).attr('src',url)
+    }
 </script>

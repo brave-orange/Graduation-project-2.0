@@ -32,7 +32,8 @@
                     <?php elseif($vo["type"] == 1): ?>
                     <textarea style="height: 70px; width: 250px;" name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>" readonly="readonly"  class="layui-input"></textarea>
                     <?php else: ?>
-                    <input type="file" style="width: 250px;"  name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>"  readonly="readonly" class="layui-input"><?php endif; ?>
+                    <input type='text' name="<?php echo ($vo["ziduan"]); ?>"  id="<?php echo ($vo["ziduan"]); ?>" onchange="loadimg('<?php echo ($vo["ziduan"]); ?>',this.value)" value="" style="display: none;">
+                    <img style="height:80px;width:80px;display: block;" id="<?php echo ($vo["ziduan"]); ?>1"><?php endif; ?>
             </div>
             </if>
 
@@ -71,7 +72,7 @@
             var jsonform = $.parseJSON(jsondata);
             // console.log(jsonform)
             for (var key in jsonform) {
-                $('#' + key).val(jsonform[key])
+                $('#' + key).val(jsonform[key]).change()
             }
 
 
@@ -104,6 +105,23 @@
                 })
             })
     })
+        $("img").click(function(){
+                var src = this.src
+                console.log(src)
+                var data = "<img src=\""+src+"\" style=\"height:100%;width:100%\">"
+                layer.open({
+                    title:'图片预览',
+                    type: 1,
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['400px','400px'], //宽高
+                    content: data,
+                });
+        });
+
     })
+    function loadimg(name,url){
+        var name1 = name+'1';
+        $('#'+name1).attr('src',url)
+    }
 
 </script>

@@ -12,10 +12,10 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="format-detection" content="telephone=no">
 
-		<link rel="stylesheet" href="/test/Public/plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="/test/Public/css/global.css" media="all">
-		<link rel="stylesheet" href="/test/Public/plugins/font-awesome/css/font-awesome.min.css">
-		<script type="text/javascript" src="/test/Public/plugins/jquery-1.9.1.min.js"></script>
+		<link rel="stylesheet" href="/Public/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="/Public/css/global.css" media="all">
+		<link rel="stylesheet" href="/Public/plugins/font-awesome/css/font-awesome.min.css">
+		<script type="text/javascript" src="/Public/plugins/jquery-1.9.1.min.js"></script>
 	</head>
 
 	<body>
@@ -99,7 +99,7 @@
 				<i class="layui-icon">&#xe602;</i>
 			</div>
 			<div class="site-mobile-shade"></div>
-			<script type="text/javascript" src="/test/Public/plugins/layui/layui.js"></script>
+			<script type="text/javascript" src="/Public/plugins/layui/layui.js"></script>
 			<script>
 				layui.use(['element', 'layer'], function() {
 					var element = layui.element(),

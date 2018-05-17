@@ -144,7 +144,6 @@ class TaskController extends CommonController
                     foreach ($body as $a) {
                         $datalist[] = array('Tid' => intval($id['id']),'title'=>$a['title'],'type'=>$a['body'],'ziduan'=>$a['ziduan']);
                     }
-                    //var_dump($datalist);
                     $insertInfo = M('admin_form_type')->addAll($datalist);       //将工单的自定义部分写入自定义内容表
                     if (!$insertInfo) {
                         $this->ajaxError('插入内容出错！');
@@ -166,6 +165,25 @@ class TaskController extends CommonController
     public function addTask()   //插入派发工单记录
     {
         $arr =array();
+        
+        $file  = M('admin_form_type')->where(array('Tid'=>$_POST['task_id'],'type'=>2))->select();
+        if(!empty($file)){
+            $config = array(
+                'maxSize'    =>    3145728,
+                'rootPath'   =>    './Uploads/',
+                'savePath'   =>    '',
+                'saveName'   =>    array('uniqid',''),
+                'exts'       =>    array('jpg', 'gif', 'png', 'jpeg'),
+                'autoSub'    =>    true,
+                'subName'    =>    array('date','Ymd'),
+            );
+            $upload = new \Think\Upload($config);// 实例化上传类
+            $info   =   $upload->upload();
+            
+        }
+        
+        
+    
         foreach ($_POST as  $key => $value)
         {
 
@@ -189,6 +207,7 @@ class TaskController extends CommonController
                     $level = $value;
                     break;
                 default:
+
                     $arr[$key] = $value;
             }
         }
@@ -408,6 +427,35 @@ class TaskController extends CommonController
             $this->ajaxError("出现错误");
 
         }
+    }
+
+    public function upload()
+    {
+         if(IS_POST){
+           foreach($_FILES as $k=>$a){
+                $key = $k; 
+                $img = $a;
+           }
+           $_FILES = array();
+           $upload = new \Think\Upload();// 实例化上传类
+           $upload->maxSize   = 3145728 ;// 设置附件上传大小
+           $upload->exts      = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+           $upload->rootPath  = './Public/'; // 设置附件上传根目录
+           $upload->savePath  = 'upload/'; // 设置附件上传（子）目录
+           // 上传文件
+           $info   =   $upload->uploadOne($img);
+           if(!$info) {// 上传错误提示错误信息
+               echo json_encode(array('status' => 'error','msg' => $upload->getError()));
+               exit;
+           }else{// 上传成功
+               
+               $imgpath = $info['savepath'].$info['savename'];
+               echo json_encode(array('status' => 'success','name'=>$key,'url'=>'/Public/'.$imgpath));
+               exit;
+           }
+           
+        }
+        
     }
 
 }

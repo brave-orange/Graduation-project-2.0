@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<form class="layui-form"enctype="multipart/form-data">
+<form id="form1" class="layui-form" enctype="multipart/form-data">
         <h2 style="margin-left: 20px;color:#1E9FFF;font-weight: bolder;font-size: 20px;margin: 20px;"><?php echo ($task["name"]); ?></h2>
     <input type="text" name = "task_id" value="<?php echo ($task["id"]); ?>" style="display: none">
     <div class="layui-form-item">
@@ -45,7 +45,10 @@
                 <?php elseif($vo["type"] == 1): ?>
                     <textarea style="height: 70px; width: 250px;" name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input"></textarea>
                 <?php else: ?>
-                    <input type="file" style="width: 250px;"  name="<?php echo ($vo["ziduan"]); ?>" lay-verify="required"  id="<?php echo ($vo["ziduan"]); ?>"   class="layui-input"><?php endif; ?>
+                    <input type="file" style="width: 250px;" class="layui-upload-file" accept="image/png, image/jpeg, image/gif, image/jpg" name="<?php echo ($vo["ziduan"]); ?>1" id="upload1">
+                     <input type='text' name="<?php echo ($vo["ziduan"]); ?>"  id="<?php echo ($vo["ziduan"]); ?>" value="" style="display: none;">
+
+                    <img class="layui-upload-img"  style="height:80px;width:80px;display: none;" id="<?php echo ($vo["ziduan"]); ?>1"><?php endif; ?>
             </div>
             </if>
 
@@ -59,6 +62,8 @@
     </div>
 
 </form>
+<!-- <script type="text/javascript" src="/Public/mine/js/jquery.form.min.js"></script> -->
+
 <script>
 
     layui.use('form', function(){
@@ -66,8 +71,11 @@
         var form = layui.form(),
             $ = layui.jquery
         //监听提交
+        
         form.on('submit(task)', function(data){
             var taskInfo = data.field;
+            console.log(data)
+
             var url = "addTask";
             $.post(url,taskInfo,function(data){
                 if(data.status == 'error'){
@@ -86,7 +94,51 @@
             return false;//阻止表单跳转
         });
 
+        $("img").click(function(){
+            var src = this.src
+            console.log(src)
+            var data = "<img src=\""+src+"\" style=\"height:100%;width:100%\">"
+            layer.open({
+                title:'图片预览',
+                type: 1,
+                skin: 'layui-layer-rim', //加上边框
+                area: ['500px','500px'], //宽高
+                content: data,
+            });
+        });
+
+
     });
+    layui.use('upload', function(){
+      layui.upload({
+        url: '' //上传接口
+        ,success: function(res){ //上传成功后的回调
+          console.log(res)
+        }
+      });
+      
+      layui.upload({
+        url: "<?php echo U('Task/upload');?>"
+        ,title: '上传文件'
+        ,elem: '#upload1' //指定原始元素，默认直接查找class="layui-upload-file"
+        ,ext: 'jpg|png|gif|jpeg'
+        ,method: 'post' //上传接口的http类型
+        ,success: function(res){
+          if(res.status == 'error'){
+              layer.msg(res.msg);
+          }else{
+              var s = res.name
+              s=s.substring(0,s.length-1);
+              $('#'+s).val(res.url) 
+              $('#'+res.name).attr('src',res.url)
+              $('#'+res.name).css('display','block')
+              console.log($('#'+s).val())
+
+          }
+        }
+      });
+    });
+
     $(function () {
         $('#btn').click();
 
