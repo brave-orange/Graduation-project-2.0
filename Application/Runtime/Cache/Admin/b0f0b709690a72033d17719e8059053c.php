@@ -65,7 +65,7 @@
 											<?php elseif($vo["state"] == 3): ?>
 											待审核
 											<?php elseif($vo["state"] == 4): ?>
-											未完成
+											审核未通过
 											<?php elseif($vo["state"] == 5): ?>
 											已完成<?php endif; ?></td>
 										<td>
@@ -123,7 +123,7 @@
 									<?php elseif($vo["state"] == 3): ?>
 									待审核
 									<?php elseif($vo["state"] == 4): ?>
-									未完成
+									审核未通过
 									<?php elseif($vo["state"] == 5): ?>
 									已完成<?php endif; ?></td>
 
@@ -176,7 +176,7 @@
 											<?php elseif($vo["state"] == 3): ?>
 											待审核
 											<?php elseif($vo["state"] == 4): ?>
-											未完成
+											审核未通过
 											<?php elseif($vo["state"] == 5): ?>
 											已完成<?php endif; ?></td>
 										<td>
@@ -233,7 +233,7 @@
 											<?php elseif($vo["state"] == 3): ?>
 											待审核
 											<?php elseif($vo["state"] == 4): ?>
-											未完成
+											审核未通过
 											<?php elseif($vo["state"] == 5): ?>
 											已完成<?php endif; ?></td>
 										<td>

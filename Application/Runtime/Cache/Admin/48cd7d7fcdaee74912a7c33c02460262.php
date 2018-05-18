@@ -105,6 +105,32 @@
                 })
             })
     })
+        $('.fail').click(function(){    //审核不通过
+            var workid = "<?php echo ($work_info["id"]); ?>"
+            var check_note = $('#checkbody').val();
+            var url = "<?php echo U('Task/notPass');?>";
+            layer.confirm('确定不让通过吗?', {
+                icon: 3,
+                skin: 'layer-ext-moon',
+                btn: ['确认','取消'] //按钮
+            },function() {
+                $.post(url, {'text': check_note, 'workid': workid}, function (data) {
+                    console.log(data.status)
+                    if (data.status == 'error') {
+                        layer.msg(data.msg, {icon: 5, time: 2000});//失败的表情
+                        return;
+                    } else {
+                        layer.msg(data.msg, {
+                            icon: 6,//成功的表情
+                            time: 3000 //2秒关闭（如果不配置，默认是3秒）
+                        }, function () {
+                            location.reload();
+                        })
+                    }
+                })
+            })
+
+        })
         $("img").click(function(){
                 var src = this.src
                 console.log(src)

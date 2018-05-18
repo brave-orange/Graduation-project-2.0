@@ -102,7 +102,7 @@
                 title:'图片预览',
                 type: 1,
                 skin: 'layui-layer-rim', //加上边框
-                area: ['500px','500px'], //宽高
+                area: ['400px','400px'], //宽高
                 content: data,
             });
         });

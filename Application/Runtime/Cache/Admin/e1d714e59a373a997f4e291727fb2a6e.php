@@ -50,7 +50,7 @@
                     <option value ="1">已接单</option>
                     <option value ="2">被拒接</option>
                     <option value ="3">待审核</option>
-                    <option value ="4">未完成</option>
+                    <option value ="4">审核未通过</option>
                     <option value ="5">已完成</option>
                 </select>
             </div>

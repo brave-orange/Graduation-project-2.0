@@ -222,7 +222,7 @@ class TaskController extends CommonController
           'state'=>0,
           'time'=>time(),
           'data'=>$formdata,
-          'lenel'=>$level
+          'level'=>$level
         );
         $res = M('admin_task')->add($data);
         if($res)
@@ -414,7 +414,21 @@ class TaskController extends CommonController
 
         }
     }
+    public function notPass(){
+        $check_note = I('post.text');
+        $workid = I('post.workid');
+        $data['check_note'] = $check_note;
+        $data['check_time'] = time();
+        $data['state'] = 4;
+        $ret = M('admin_task')->where(array('id'=>$workid))->save($data);
+        if($ret)
+        {
+            $this->ajaxSuccess("审核成功");
+        }else{
+            $this->ajaxError("审核失败");
 
+        }
+    }
     public function goback()   ///拒接工单
     {
         $workid = I('post.workid');
@@ -428,7 +442,26 @@ class TaskController extends CommonController
 
         }
     }
+    public function tryagain(){
+        $workid = I('post.task_id');
 
+        $a = M("admin_task")->where(array('id'=>$workid))->save(array('state'=>0));
+        if($a){
+            $this->ajaxSuccess("已重发该任务");
+        }else{
+            $this->ajaxError("出现错误");
+        }
+    } 
+    public function backagain(){
+        $workid = I('post.task_id');
+        $a = M("admin_task")->where(array('id'=>$workid))->save(array('state'=>3));
+        if($a){
+            $this->ajaxSuccess("已重新提交该任务");
+        }else{
+            $this->ajaxError("出现错误");
+        }
+    }
+    
     public function upload()
     {
          if(IS_POST){
@@ -456,6 +489,32 @@ class TaskController extends CommonController
            
         }
         
+    }
+    public function abnormal_task(){
+        $userid = $_SESSION['user_info']['id'];
+          //被拒接异常任务
+          
+        $data1 = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as tid1 ,a.title as title,e.name as tid ,b.user_name as createid ,c.user_name as exeid, a.time as time,d.user_name as checkid ,a.state as state')
+            ->where(array('a.state'=>2,'createid'=>$userid))
+            ->select();
+           //未审核通过
+            $data2 = M('admin_task as a')
+            ->join('left join admin_user as b ON a.createid = b.id')
+            ->join('left join admin_user as c ON a.exeid = c.id')
+            ->join('left join admin_user as d ON a.checkid = d.id')
+            ->join('left join admin_task_list as e ON a.tid = e.id')
+            ->field('a.id as id ,a.level,a.tid as tid1 ,a.title as title,e.name as tid ,b.user_name as createid ,c.user_name as exeid ,a.time as time , d.user_name as checkid ,a.state as state')
+            ->where(array('a.state'=>4,'createid'=>$userid))
+            ->select();
+
+
+        $this->assign(array('data1'=>$data1,'data2'=>$data2));
+        $this->display();
     }
 
 }

@@ -150,11 +150,5 @@ class IndexController extends CommonController {
         $this->ajaxReturn($str);
     }
 
-    public function yourself(){
-        if(IS_POST){
 
-        }else{
-            $this->display();
-        }
-    }
 }
