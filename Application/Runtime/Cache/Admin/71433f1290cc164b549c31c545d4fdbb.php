@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Table</title>
-		<link rel="stylesheet" href="/test/Public/plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="/test/Public/css/global.css" media="all">
-		<link rel="stylesheet" href="/test/Public/plugins/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/Public/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="/Public/css/global.css" media="all">
+		<link rel="stylesheet" href="/Public/plugins/font-awesome/css/font-awesome.min.css">
 	</head>
 
 	<body>
@@ -41,7 +41,7 @@
 				</div>
 			</fieldset>
 		</div>
-		<script type="text/javascript" src="/test/Public/plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="/Public/plugins/layui/layui.js"></script>
 		<script>
 			layui.use(['layer','form'], function() {
 				var form = layui.form(),
