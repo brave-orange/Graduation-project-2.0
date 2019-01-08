@@ -490,7 +490,7 @@ class TaskController extends CommonController
         }
         
     }
-    public function abnormal_task(){
+    public function AbnormalTask(){
         $userid = $_SESSION['user_info']['id'];
           //被拒接异常任务
           

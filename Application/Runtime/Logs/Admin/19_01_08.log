@@ -1,0 +1,1110 @@
+[ 2019-01-08T11:13:09+08:00 ] 192.168.31.168 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2019-01-08T11:13:24+08:00 ] 192.168.31.168 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.128008s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.128008s ]
+
+[ 2019-01-08T11:13:24+08:00 ] 192.168.31.168 /index.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/login' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.013001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.013001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:13:24+08:00 ] 192.168.31.168 /index.php/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/verify' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.024001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.024001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:13:55+08:00 ] 192.168.31.168 /index.php/Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/doLogin' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin_user` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `admin_user` SET `lastlogin_time`='1546917235' WHERE `id` = 15 [ RunTime:0.0790s ]
+
+[ 2019-01-08T11:13:55+08:00 ] 192.168.31.168 /index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.031002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0070s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','42','41','14','21','24','25','26','27','22','28','29','30','31','23','33','35','37','39','40','38','32') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:13:55+08:00 ] 192.168.31.168 /index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.050003s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.050003s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0110s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 0  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `checkid` = '15' AND a.state = 3  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 1  [ RunTime:0.0000s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state > 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:13:56+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkinfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.032002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.032002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-08T11:13:56+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkcount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkcount' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.046002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.046002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546272000 AND 1546358400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0560s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546272000 AND 1546358400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546272000 AND 1546358400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546358400 AND 1546444800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546358400 AND 1546444800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546358400 AND 1546444800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546444800 AND 1546531200 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546444800 AND 1546531200 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546444800 AND 1546531200 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546531200 AND 1546617600 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546531200 AND 1546617600 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546531200 AND 1546617600 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546617600 AND 1546704000 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546617600 AND 1546704000 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546617600 AND 1546704000 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546704000 AND 1546790400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546704000 AND 1546790400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546704000 AND 1546790400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546790400 AND 1546876800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546790400 AND 1546876800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546790400 AND 1546876800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-08T11:14:58+08:00 ] 192.168.31.168 /index.php/Task/AddTaskType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/AddTaskType' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.026002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.026002s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:15:01+08:00 ] 192.168.31.168 /index.php/Task/taskList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/taskList' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0040s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.data as data FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zhaiyao E:\WWW\Graduation-project-2.0\Application\Admin\Controller\TaskController.class.php 第 260 行.
+NOTIC: [8] Undefined index: zhaiyao E:\WWW\Graduation-project-2.0\Application\Admin\Controller\TaskController.class.php 第 260 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:15:03+08:00 ] 192.168.31.168 /index.php/Task/EditWork.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/EditWork' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.023001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023001s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin_task` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name` FROM `admin_task_list` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0040s ]
+SQL: SELECT `user_name` FROM `admin_user` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_form_type` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_form_type` WHERE `Tid` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0040s ]
+SQL: SELECT a.id,a.user_name,a.phone FROM admin_user as a INNER JOIN admin_auth_group_access as b ON a.id = b.uid  WHERE b.group_id IN (27,28,29,30)  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`user_name` FROM `admin_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: state E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 4 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\8a7126c89423d6966cdfd2bacc5a3128.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-01-08T11:15:25+08:00 ] 192.168.31.168 /index.php/Task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.017001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.018001s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task_list` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_task_list` WHERE `state` = 1 LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `tid` = 23 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:16:10+08:00 ] 192.168.31.168 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.026002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:16:20+08:00 ] 192.168.31.168 /index.php/AuthGroup/giveRole.html?user_id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/giveRole' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.023002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.uid FROM admin_auth_group a LEFT JOIN admin_auth_group_access b ON a.id=b.group_id AND b.uid=15  WHERE a.status = 1 ORDER BY a.is_manage DESC,a.id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-01-08T11:16:27+08:00 ] 192.168.31.168 /index.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.017001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017001s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined variable: page E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:16:31+08:00 ] 192.168.31.168 /index.php/User/Yourself.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/Yourself' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.014001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0040s ]
+ERR: 非法操作:Yourself
+
+[ 2019-01-08T11:16:33+08:00 ] 192.168.31.168 /index.php/Task/AbnormalTask.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/AbnormalTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.027002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.027002s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0040s ]
+ERR: 非法操作:AbnormalTask
+
+[ 2019-01-08T11:25:45+08:00 ] 192.168.31.168 /index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.115007s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.115007s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','42','41','14','21','24','25','26','27','22','28','29','30','31','23','33','35','37','39','40','38','32') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:25:46+08:00 ] 192.168.31.168 /index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.039002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.039002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0210s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 0  [ RunTime:0.0030s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `checkid` = '15' AND a.state = 3  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state > 1  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2019-01-08T11:25:46+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkinfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.025001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025001s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-08T11:25:47+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkcount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkcount' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.035002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.035002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546272000 AND 1546358400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546272000 AND 1546358400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546272000 AND 1546358400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546358400 AND 1546444800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546358400 AND 1546444800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546358400 AND 1546444800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546444800 AND 1546531200 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546444800 AND 1546531200 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546444800 AND 1546531200 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546531200 AND 1546617600 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546531200 AND 1546617600 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546531200 AND 1546617600 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546617600 AND 1546704000 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546617600 AND 1546704000 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546617600 AND 1546704000 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546704000 AND 1546790400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546704000 AND 1546790400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546704000 AND 1546790400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546790400 AND 1546876800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546790400 AND 1546876800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546790400 AND 1546876800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-08T11:25:47+08:00 ] 192.168.31.168 /index.php/User/Yourself.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/Yourself' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.030001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.030001s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0060s ]
+ERR: 非法操作:Yourself
+
+[ 2019-01-08T11:25:48+08:00 ] 192.168.31.168 /index.php/Task/AbnormalTask.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/AbnormalTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.019001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.019001s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0060s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 2 AND `createid` = '15'  [ RunTime:0.0000s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 4 AND `createid` = '15'  [ RunTime:0.0000s ]
+ERR: 模板不存在:./Application/Admin/View/Task/AbnormalTask.html
+
+[ 2019-01-08T11:26:22+08:00 ] 192.168.31.168 /index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','42','41','14','21','24','25','26','27','22','28','29','30','31','23','33','35','37','39','40','38','32') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:26:22+08:00 ] 192.168.31.168 /index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.040002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.040002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0130s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 0  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `checkid` = '15' AND a.state = 3  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 1  [ RunTime:0.0000s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state > 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2019-01-08T11:26:23+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkinfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.034002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.035002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `checkid` = 15 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `createid` = 15 LIMIT 1   [ RunTime:0.0180s ]
+
+[ 2019-01-08T11:26:23+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkcount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkcount' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546272000 AND 1546358400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546272000 AND 1546358400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546272000 AND 1546358400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546358400 AND 1546444800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546358400 AND 1546444800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546358400 AND 1546444800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546444800 AND 1546531200 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546444800 AND 1546531200 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546444800 AND 1546531200 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546531200 AND 1546617600 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546531200 AND 1546617600 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546531200 AND 1546617600 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546617600 AND 1546704000 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546617600 AND 1546704000 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546617600 AND 1546704000 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546704000 AND 1546790400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546704000 AND 1546790400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546704000 AND 1546790400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546790400 AND 1546876800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546790400 AND 1546876800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546790400 AND 1546876800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-08T11:26:23+08:00 ] 192.168.31.168 /index.php/User/Yourself.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/Yourself' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.025002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025002s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0070s ]
+ERR: 非法操作:Yourself
+
+[ 2019-01-08T11:26:24+08:00 ] 192.168.31.168 /index.php/Task/AbnormalTask.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/AbnormalTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.017001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017001s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0060s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 2 AND `createid` = '15'  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 4 AND `createid` = '15'  [ RunTime:0.0010s ]
+ERR: 模板不存在:./Application/Admin/View/Task/AbnormalTask.html
+
+[ 2019-01-08T11:26:26+08:00 ] 192.168.31.168 /index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.026002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','42','41','14','21','24','25','26','27','22','28','29','30','31','23','33','35','37','39','40','38','32') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2019-01-08T11:26:26+08:00 ] 192.168.31.168 /index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.043003s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.043003s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0130s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 0  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `checkid` = '15' AND a.state = 3  [ RunTime:0.0040s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 1  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state > 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:26:27+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkinfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.032002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.032002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exeid` = 15 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-08T11:26:27+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkcount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkcount' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.025002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546272000 AND 1546358400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546272000 AND 1546358400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546272000 AND 1546358400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546358400 AND 1546444800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546358400 AND 1546444800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546358400 AND 1546444800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546444800 AND 1546531200 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546444800 AND 1546531200 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546444800 AND 1546531200 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546531200 AND 1546617600 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546531200 AND 1546617600 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546531200 AND 1546617600 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546617600 AND 1546704000 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546617600 AND 1546704000 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546617600 AND 1546704000 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546704000 AND 1546790400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546704000 AND 1546790400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546704000 AND 1546790400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546790400 AND 1546876800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546790400 AND 1546876800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546790400 AND 1546876800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-08T11:26:28+08:00 ] 192.168.31.168 /index.php/Task/AbnormalTask.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/AbnormalTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.021001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.021001s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0040s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 2 AND `createid` = '15'  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 4 AND `createid` = '15'  [ RunTime:0.0000s ]
+ERR: 模板不存在:./Application/Admin/View/Task/AbnormalTask.html
+
+[ 2019-01-08T11:26:43+08:00 ] 192.168.31.168 /index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.025002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.025002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','42','41','14','21','24','25','26','27','22','28','29','30','31','23','33','35','37','39','40','38','32') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-01-08T11:26:44+08:00 ] 192.168.31.168 /index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.041002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.041002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0120s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 0  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `checkid` = '15' AND a.state = 3  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state = 1  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as taskid,e.name as tid,b.user_name as createid,c.user_name as exeid,d.user_name as checkid,a.time as time,a.state as state,a.title as title FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE `exeid` = '15' AND a.state > 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-01-08T11:26:44+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkinfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.030002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.030002s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exeid` = 15 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `checkid` = 15 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-08T11:26:44+08:00 ] 192.168.31.168 /index.php/Index/getSbWorkcount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/getSbWorkcount' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.020001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.020001s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546272000 AND 1546358400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546272000 AND 1546358400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546272000 AND 1546358400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546358400 AND 1546444800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546358400 AND 1546444800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546358400 AND 1546444800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546444800 AND 1546531200 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546444800 AND 1546531200 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546444800 AND 1546531200 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546531200 AND 1546617600 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546531200 AND 1546617600 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546531200 AND 1546617600 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546617600 AND 1546704000 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546617600 AND 1546704000 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546617600 AND 1546704000 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546704000 AND 1546790400 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546704000 AND 1546790400 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546704000 AND 1546790400 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `exe_time` BETWEEN 1546790400 AND 1546876800 AND `exeid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `check_time` BETWEEN 1546790400 AND 1546876800 AND `checkid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_task` WHERE `time` BETWEEN 1546790400 AND 1546876800 AND `createid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-08T11:26:45+08:00 ] 192.168.31.168 /index.php/Task/AbnormalTask.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Task/AbnormalTask' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.022002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.022002s ]
+NOTIC: [2] Declaration of Admin\Model\AdminTaskListModel::Create($data = '') should be compatible with Think\Model::create($data = '', $type = '') E:\WWW\Graduation-project-2.0\Application\Admin\Model\AdminTaskListModel.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `admin_task_list` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `admin_task` [ RunTime:0.0050s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 2 AND `createid` = '15'  [ RunTime:0.0010s ]
+SQL: SELECT a.id as id,a.level,a.tid as tid1,a.title as title,e.name as tid,b.user_name as createid,c.user_name as exeid,a.time as time,d.user_name as checkid,a.state as state FROM admin_task as a left join admin_user as b ON a.createid = b.id left join admin_user as c ON a.exeid = c.id left join admin_user as d ON a.checkid = d.id left join admin_task_list as e ON a.tid = e.id  WHERE a.state = 4 AND `createid` = '15'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:26:48+08:00 ] 192.168.31.168 /index.php/User/Yourself.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/Yourself' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.027002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.027002s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0040s ]
+ERR: 非法操作:Yourself
+
+[ 2019-01-08T11:26:57+08:00 ] 192.168.31.168 /index.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined variable: page E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:26:57+08:00 ] 192.168.31.168 /index.php/AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/authGroupList' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.018001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-01-08T11:26:58+08:00 ] 192.168.31.168 /index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.016000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+NOTIC: [8] Undefined index: work_type E:\WWW\Graduation-project-2.0\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

@@ -8,7 +8,7 @@ return array(
     'DB_HOST'                       => '127.0.0.1', // 服务器地址119.28.16.147
     'DB_NAME'                       => 'auth', // 数据库名
     'DB_USER'                       => 'root', // 用户名
-    'DB_PWD'                        => 'wang', // 密码
+    'DB_PWD'                        => 'root', // 密码
     'DB_PORT'                       =>  3306, // 端口
     'DB_CHARSET'                    =>  'utf8', // 字符集
     'DATA_CACHE_TIME'               =>  600,
